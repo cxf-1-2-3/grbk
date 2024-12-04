@@ -1,6 +1,7 @@
 ---
-title: 使用第三方插件 countup.js
-sidebar: false
+title: 使用第三方插件
+# sidebar: false
 ---
-<CountUp  :startVal='0':endVal='2000':decimalsPlaces='3':duration = '3' :delay='1000'></CountUp >
-<<< @/docs/.vuepress/components/CountUp.vue
+
+## 使用图片 
+<img :src="$withBase('./assets/image/vuess.jpg')" alt="foo">

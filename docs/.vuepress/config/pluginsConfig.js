@@ -1,6 +1,7 @@
 const moment = require('moment')
 const secret = require('./secret')
 module.exports = [
+  // 配置更新时间
   [
     '@vuepress/last-updated',
     {
@@ -34,5 +35,21 @@ module.exports = [
       autoCreateIssue: true
     }
   ],
-  ['@vuepress/back-to-top']
+  // 返回顶部功能
+  ['@vuepress/back-to-top'],
+  // 图片的缩放功能
+  [
+    '@vuepress/medium-zoom',
+    {
+      selector: 'img'
+    }
+  ],
+  // 自动生成侧边栏
+  [
+    'vuepress-plugin-auto-sidebar',
+    {
+      // options
+      nav: true //生成导航栏文件
+    }
+  ]
 ]
