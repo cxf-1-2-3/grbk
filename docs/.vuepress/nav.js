@@ -14,6 +14,10 @@ module.exports = [
       {
         text: '数字动画插件使用',
         link: '/vue/视频播放.md'
+      },
+      {
+        text: '页面水印',
+        link: '/vue/页面水印.md'
       }
     ]
   },
@@ -41,6 +45,15 @@ module.exports = [
       {
         text: '基础知识',
         link: '/NodeJs/基础知识.md'
+      }
+    ]
+  },
+  {
+    text: '微信小程序',
+    items: [
+      {
+        text: '基础知识',
+        link: '/WeChatMiniProgram/基础知识.md'
       }
     ]
   },

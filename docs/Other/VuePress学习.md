@@ -233,7 +233,7 @@ git commit -m 'deploy'
 cd -
 ```
 
-10.配置pwd
+## 10.配置pwd
 
 ```
 1.安装插件
@@ -270,13 +270,13 @@ module.exports = {
 }
 ```
 
-## 10.Vssus使用
+## 11.Vssus使用
 
 1.创建一个[OAuth APP](https://github.com/settings/developers)
 
 2.填写信息
 
-![vuess](/assets/image/vuess.jpg)
+![vuess](../.vuepress/public/assets/image/vuess.jpg)
 
 3.下载依赖
 
@@ -310,7 +310,7 @@ module.exports = {
 <Vssue />
 ```
 
-## 11.back to top
+## 12.back to top
 
 ```
 1.介绍
@@ -326,7 +326,7 @@ module.exports = {
 }
 ```
 
-## 12.MarKdown使用
+## 13.MarKdown使用
 
 ```
 1.创建docs\.vuepress\components文件夹
@@ -336,7 +336,7 @@ module.exports = {
 	<<< @/docs/.vuepress/components/CountUp.vue  //显示vue文件中的代码
 ```
 
-## 13.使用图片缩放
+## 14.使用图片缩放
 
 ```
 1.下载插件
@@ -356,7 +356,7 @@ module.exports = {
 方法二: ![vuess](/assets/image/vuess.jpg)
 ```
 
-## 14.配置自动生成
+## 15.配置自动生成
 
 ```
 1.下载依赖
