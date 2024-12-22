@@ -22,6 +22,35 @@ module.exports = [
     ]
   },
   {
+    text: 'vue3',
+    items: [
+      {
+        text: '语法学习',
+        link: '/vue3/语法学习.md'
+      },
+      {
+        text: 'Pinia',
+        link: '/vue3/Pinia.md'
+      },
+      {
+        text: 'elementPlus使用',
+        link: '/vue3/elementPlus.md'
+      },
+      {
+        text: 'axios配置及使用',
+        link: '/vue3/axios.md'
+      },
+      {
+        text: 'scss文件自动导入',
+        link: '/vue3/scss学习.md'
+      },
+      {
+        text: '其他',
+        link: '/vue3/其他.md'
+      }
+    ]
+  },
+  {
     text: 'JS',
     items: [
       {
@@ -60,6 +89,10 @@ module.exports = [
   {
     text: '其他',
     items: [
+      {
+        text: 'Vsode插件',
+        link: '/Other/Vsode插件.md'
+      },
       {
         text: 'VuePress学习',
         link: '/Other/VuePress学习.md'
