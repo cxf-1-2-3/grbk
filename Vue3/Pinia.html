@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>状态管理库Pinia | 小陈同学</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/grbk/favicon.ico">
+    <link rel="manifest" href="/grbk/manifest.json">
+    <link rel="apple-touch-icon" href="/grbk/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/grbk/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="学习笔记">
+    <meta name="author" content="小陈同学">
+    <meta name="keywords" content="学习笔记">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/grbk/assets/css/0.styles.e9a7ea3a.css" as="style"><link rel="preload" href="/grbk/assets/js/app.b50cdfd5.js" as="script"><link rel="preload" href="/grbk/assets/js/2.f91b59e3.js" as="script"><link rel="preload" href="/grbk/assets/js/1.55b4e68e.js" as="script"><link rel="preload" href="/grbk/assets/js/35.a64890b0.js" as="script"><link rel="preload" href="/grbk/assets/js/23.82cf4625.js" as="script"><link rel="prefetch" href="/grbk/assets/js/10.d542067e.js"><link rel="prefetch" href="/grbk/assets/js/11.5c426303.js"><link rel="prefetch" href="/grbk/assets/js/12.b9d98a1a.js"><link rel="prefetch" href="/grbk/assets/js/13.12b3381e.js"><link rel="prefetch" href="/grbk/assets/js/14.5ac41178.js"><link rel="prefetch" href="/grbk/assets/js/15.aff17c76.js"><link rel="prefetch" href="/grbk/assets/js/16.8fffea27.js"><link rel="prefetch" href="/grbk/assets/js/17.d9fc4f8d.js"><link rel="prefetch" href="/grbk/assets/js/18.85f51e2e.js"><link rel="prefetch" href="/grbk/assets/js/19.f4fd38c7.js"><link rel="prefetch" href="/grbk/assets/js/20.9b9d2c0b.js"><link rel="prefetch" href="/grbk/assets/js/21.92aef9e3.js"><link rel="prefetch" href="/grbk/assets/js/22.a28eb7b8.js"><link rel="prefetch" href="/grbk/assets/js/24.0ca963e1.js"><link rel="prefetch" href="/grbk/assets/js/25.650fd3d8.js"><link rel="prefetch" href="/grbk/assets/js/26.5c8eddc5.js"><link rel="prefetch" href="/grbk/assets/js/27.83d4fac0.js"><link rel="prefetch" href="/grbk/assets/js/28.777b03c4.js"><link rel="prefetch" href="/grbk/assets/js/29.a6a9d90e.js"><link rel="prefetch" href="/grbk/assets/js/3.3547f946.js"><link rel="prefetch" href="/grbk/assets/js/30.72de84de.js"><link rel="prefetch" href="/grbk/assets/js/31.e9b69fbd.js"><link rel="prefetch" href="/grbk/assets/js/32.50f7ba23.js"><link rel="prefetch" href="/grbk/assets/js/33.83ba4f06.js"><link rel="prefetch" href="/grbk/assets/js/34.92746370.js"><link rel="prefetch" href="/grbk/assets/js/36.b47f10ea.js"><link rel="prefetch" href="/grbk/assets/js/37.cef817f6.js"><link rel="prefetch" href="/grbk/assets/js/38.aba0f60b.js"><link rel="prefetch" href="/grbk/assets/js/39.27b1cca3.js"><link rel="prefetch" href="/grbk/assets/js/4.1fd84505.js"><link rel="prefetch" href="/grbk/assets/js/40.eec5c85e.js"><link rel="prefetch" href="/grbk/assets/js/41.e085b1c2.js"><link rel="prefetch" href="/grbk/assets/js/42.3bb138cd.js"><link rel="prefetch" href="/grbk/assets/js/43.2ba8723e.js"><link rel="prefetch" href="/grbk/assets/js/44.da5a3351.js"><link rel="prefetch" href="/grbk/assets/js/45.2b146ab0.js"><link rel="prefetch" href="/grbk/assets/js/46.d3921fac.js"><link rel="prefetch" href="/grbk/assets/js/5.e1b9c20f.js"><link rel="prefetch" href="/grbk/assets/js/6.f1cc023a.js"><link rel="prefetch" href="/grbk/assets/js/7.00f4a8f8.js"><link rel="prefetch" href="/grbk/assets/js/vendors~docsearch.0f7eca41.js">
+    <link rel="stylesheet" href="/grbk/assets/css/0.styles.e9a7ea3a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/grbk/" class="home-link router-link-active"><img src="/grbk/assets/img/hero.png" alt="小陈同学" class="logo"> <span class="site-name can-hide">小陈同学</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/grbk/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/视频播放.html" class="nav-link">
+  视频播放功能
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/视频播放.html" class="nav-link">
+  数字动画插件使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/页面水印.html" class="nav-link">
+  页面水印
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue3" class="dropdown-title"><span class="title">vue3</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue3" class="mobile-dropdown-title"><span class="title">vue3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/vue3/语法学习.html" class="nav-link">
+  语法学习
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/Pinia.html" class="nav-link">
+  Pinia
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/elementPlus.html" class="nav-link">
+  elementPlus使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/axios.html" class="nav-link">
+  axios配置及使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/scss学习.html" class="nav-link">
+  scss文件自动导入
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/其他.html" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JS" class="dropdown-title"><span class="title">JS</span> <span class="arrow down"></span></button> <button type="button" aria-label="JS" class="mobile-dropdown-title"><span class="title">JS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/JS/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="REACT" class="dropdown-title"><span class="title">REACT</span> <span class="arrow down"></span></button> <button type="button" aria-label="REACT" class="mobile-dropdown-title"><span class="title">REACT</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/React/插件使用.html" class="nav-link">
+  插件使用
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="NodeJs" class="dropdown-title"><span class="title">NodeJs</span> <span class="arrow down"></span></button> <button type="button" aria-label="NodeJs" class="mobile-dropdown-title"><span class="title">NodeJs</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/NodeJs/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="微信小程序" class="dropdown-title"><span class="title">微信小程序</span> <span class="arrow down"></span></button> <button type="button" aria-label="微信小程序" class="mobile-dropdown-title"><span class="title">微信小程序</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/WeChatMiniProgram/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/Other/Vsode插件.html" class="nav-link">
+  Vsode插件
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Other/VuePress学习.html" class="nav-link">
+  VuePress学习
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/grbk/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/视频播放.html" class="nav-link">
+  视频播放功能
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/视频播放.html" class="nav-link">
+  数字动画插件使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/页面水印.html" class="nav-link">
+  页面水印
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue3" class="dropdown-title"><span class="title">vue3</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue3" class="mobile-dropdown-title"><span class="title">vue3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/vue3/语法学习.html" class="nav-link">
+  语法学习
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/Pinia.html" class="nav-link">
+  Pinia
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/elementPlus.html" class="nav-link">
+  elementPlus使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/axios.html" class="nav-link">
+  axios配置及使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/scss学习.html" class="nav-link">
+  scss文件自动导入
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/其他.html" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JS" class="dropdown-title"><span class="title">JS</span> <span class="arrow down"></span></button> <button type="button" aria-label="JS" class="mobile-dropdown-title"><span class="title">JS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/JS/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="REACT" class="dropdown-title"><span class="title">REACT</span> <span class="arrow down"></span></button> <button type="button" aria-label="REACT" class="mobile-dropdown-title"><span class="title">REACT</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/React/插件使用.html" class="nav-link">
+  插件使用
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="NodeJs" class="dropdown-title"><span class="title">NodeJs</span> <span class="arrow down"></span></button> <button type="button" aria-label="NodeJs" class="mobile-dropdown-title"><span class="title">NodeJs</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/NodeJs/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="微信小程序" class="dropdown-title"><span class="title">微信小程序</span> <span class="arrow down"></span></button> <button type="button" aria-label="微信小程序" class="mobile-dropdown-title"><span class="title">微信小程序</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/WeChatMiniProgram/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/Other/Vsode插件.html" class="nav-link">
+  Vsode插件
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Other/VuePress学习.html" class="nav-link">
+  VuePress学习
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue3</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/grbk/Vue3/其他.html" class="sidebar-link">/Vue3/其他.html</a></li><li><a href="/grbk/Vue3/语法学习.html" class="sidebar-link">语法学习</a></li><li><a href="/grbk/Vue3/Pinia.html" aria-current="page" class="active sidebar-link">状态管理库Pinia</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/grbk/Vue3/Pinia.html#_1-介绍" class="sidebar-link">1.介绍</a></li><li class="sidebar-sub-header"><a href="/grbk/Vue3/Pinia.html#_2-使用" class="sidebar-link">2.使用</a></li></ul></li><li><a href="/grbk/Vue3/elementPlus.html" class="sidebar-link">使用elementPlus</a></li><li><a href="/grbk/Vue3/axios.html" class="sidebar-link">axois使用及配置</a></li><li><a href="/grbk/Vue3/scss学习.html" class="sidebar-link">scss文件自动导入</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="状态管理库pinia"><a href="#状态管理库pinia" class="header-anchor">#</a> 状态管理库Pinia</h1> <h2 id="_1-介绍"><a href="#_1-介绍" class="header-anchor">#</a> 1.介绍</h2> <div class="language- extra-class"><pre class="language-text"><code>介绍
+Pinia是vue的状态管理库，是Vuex状态管理库的替代
+
+优势
+1.提供更加简单的API(去掉了mutation)
+2.提供符合组合式风格的API
+3.去掉了modules的概念，每个store都是一个独立的模块
+4.搭配TypeScript一起使用提供可靠的类型推断
+</code></pre></div><h2 id="_2-使用"><a href="#_2-使用" class="header-anchor">#</a> 2.使用</h2> <div class="language-vue extra-class"><pre class="language-vue"><code>1.安装
+npm install pinia
+
+2.创建一个 pinia 实例
+import './assets/main.css'
+import { createApp } from 'vue'
+import App from './App.vue'
+// 导入createPinia
+import { createPinia } from 'pinia'
+// 创建实例
+const pinia = createPinia()
+// 挂载pinia到app应用中
+createApp(App).use(pinia).mount('#app')
+
+3.定义Store(state+action)
+在Stores文件夹下创建counter.js文件
+// 导入一个方法 defineStore
+import { defineStore } from 'pinia'
+import { computed, ref } from 'vue'
+
+export const useCounter = defineStore('counter', () =&gt; {
+  //定义数据(state)
+  const count = ref(0)
+  // 定义修改数据的方法(action 同步和异步)
+  const increment = () =&gt; {
+    count.value += 1
+  }
+  // getter定义
+  const getterCount = computed(() =&gt; count.value * 2)
+    // 以对象的方法return提供组件使用
+  return {
+    count,
+    increment,
+    getterCount
+  }
+
+})
+
+
+4.组件使用Store
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">setup</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token comment">// 导入pinia</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useCounter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/Stores/counter.js'</span>
+
+<span class="token keyword">const</span> Counter <span class="token operator">=</span> <span class="token function">useCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Counter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Counter.increment<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{ Counter.count }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    {{ Counter.getterCount }}
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+5.storeToRefs
+介绍
+使用storeToRefs函数可以辅助保持数据(state+getter)的响应式解构
+
+定义
+const { 解构数据 } = storeToRefs(Counter)
+
+使用
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">setup</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token comment">// 导入pinia</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useCounter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/Stores/counter.js'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> storeToRefs <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> Counter <span class="token operator">=</span> <span class="token function">useCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">//解构赋值保存响应式数据</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> count<span class="token punctuation">,</span> getterCount <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">storeToRefs</span><span class="token punctuation">(</span>Counter<span class="token punctuation">)</span>
+<span class="token comment">// 方法的解构赋值</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> increment <span class="token punctuation">}</span> <span class="token operator">=</span> Counter
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Counter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>increment<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{ count }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    {{ getterCount }}
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2024-12-22 22:07:31</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/grbk/Vue3/语法学习.html" class="prev">
+        语法学习
+      </a></span> <span class="next"><a href="/grbk/Vue3/elementPlus.html">
+        使用elementPlus
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/grbk/assets/js/app.b50cdfd5.js" defer></script><script src="/grbk/assets/js/2.f91b59e3.js" defer></script><script src="/grbk/assets/js/1.55b4e68e.js" defer></script><script src="/grbk/assets/js/35.a64890b0.js" defer></script><script src="/grbk/assets/js/23.82cf4625.js" defer></script>
+  </body>
+</html>
