@@ -78,6 +78,19 @@ module.exports = [
     ]
   },
   {
+    text: 'Java',
+    items: [
+      {
+        text: '基础学习',
+        link: '/Java/基础学习.md'
+      },
+      {
+        text: '基础语法',
+        link: '/Java/基础语法.md'
+      }
+    ]
+  },
+  {
     text: '微信小程序',
     items: [
       {
