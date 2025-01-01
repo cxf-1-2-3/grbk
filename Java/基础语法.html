@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基础语法 | 小陈同学</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/grbk/favicon.ico">
+    <link rel="manifest" href="/grbk/manifest.json">
+    <link rel="apple-touch-icon" href="/grbk/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/grbk/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="学习笔记">
+    <meta name="author" content="小陈同学">
+    <meta name="keywords" content="学习笔记">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/grbk/assets/css/0.styles.c17060ed.css" as="style"><link rel="preload" href="/grbk/assets/js/app.71b1c8e5.js" as="script"><link rel="preload" href="/grbk/assets/js/2.dcc9a4f0.js" as="script"><link rel="preload" href="/grbk/assets/js/1.0fa2d0d7.js" as="script"><link rel="preload" href="/grbk/assets/js/32.5b817f73.js" as="script"><link rel="preload" href="/grbk/assets/js/24.bcc58448.js" as="script"><link rel="prefetch" href="/grbk/assets/js/10.d9b1d02d.js"><link rel="prefetch" href="/grbk/assets/js/11.006bccac.js"><link rel="prefetch" href="/grbk/assets/js/12.82cad536.js"><link rel="prefetch" href="/grbk/assets/js/13.1b9ced78.js"><link rel="prefetch" href="/grbk/assets/js/14.bd2276a8.js"><link rel="prefetch" href="/grbk/assets/js/15.10530bbe.js"><link rel="prefetch" href="/grbk/assets/js/16.3c421a7f.js"><link rel="prefetch" href="/grbk/assets/js/17.e49caa1a.js"><link rel="prefetch" href="/grbk/assets/js/18.8e36194a.js"><link rel="prefetch" href="/grbk/assets/js/19.f65272c8.js"><link rel="prefetch" href="/grbk/assets/js/20.61e91776.js"><link rel="prefetch" href="/grbk/assets/js/21.03c7b9e6.js"><link rel="prefetch" href="/grbk/assets/js/22.b0c887fc.js"><link rel="prefetch" href="/grbk/assets/js/23.a95ba674.js"><link rel="prefetch" href="/grbk/assets/js/25.a7a26a79.js"><link rel="prefetch" href="/grbk/assets/js/26.4228cebe.js"><link rel="prefetch" href="/grbk/assets/js/27.47d98656.js"><link rel="prefetch" href="/grbk/assets/js/28.cceb1e39.js"><link rel="prefetch" href="/grbk/assets/js/29.0c965d59.js"><link rel="prefetch" href="/grbk/assets/js/3.6f025723.js"><link rel="prefetch" href="/grbk/assets/js/30.3e3a3bd4.js"><link rel="prefetch" href="/grbk/assets/js/31.e4722e69.js"><link rel="prefetch" href="/grbk/assets/js/33.4ac73b21.js"><link rel="prefetch" href="/grbk/assets/js/34.46271d27.js"><link rel="prefetch" href="/grbk/assets/js/35.08feeacd.js"><link rel="prefetch" href="/grbk/assets/js/36.30476b6e.js"><link rel="prefetch" href="/grbk/assets/js/37.dd3302c9.js"><link rel="prefetch" href="/grbk/assets/js/38.738af3e1.js"><link rel="prefetch" href="/grbk/assets/js/39.a1d8abbe.js"><link rel="prefetch" href="/grbk/assets/js/4.ba616319.js"><link rel="prefetch" href="/grbk/assets/js/40.ae583ec3.js"><link rel="prefetch" href="/grbk/assets/js/41.e13410b6.js"><link rel="prefetch" href="/grbk/assets/js/42.54de4f8a.js"><link rel="prefetch" href="/grbk/assets/js/43.4b2ed3e6.js"><link rel="prefetch" href="/grbk/assets/js/44.d705f940.js"><link rel="prefetch" href="/grbk/assets/js/45.4db0c6fd.js"><link rel="prefetch" href="/grbk/assets/js/46.ee164359.js"><link rel="prefetch" href="/grbk/assets/js/47.7e618be7.js"><link rel="prefetch" href="/grbk/assets/js/48.9a5ab524.js"><link rel="prefetch" href="/grbk/assets/js/5.f00163c5.js"><link rel="prefetch" href="/grbk/assets/js/6.d4d137f6.js"><link rel="prefetch" href="/grbk/assets/js/7.9e46aaf8.js"><link rel="prefetch" href="/grbk/assets/js/vendors~docsearch.e416f848.js">
+    <link rel="stylesheet" href="/grbk/assets/css/0.styles.c17060ed.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/grbk/" class="home-link router-link-active"><img src="/grbk/assets/img/hero.png" alt="小陈同学" class="logo"> <span class="site-name can-hide">小陈同学</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/grbk/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/视频播放.html" class="nav-link">
+  视频播放功能
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/视频播放.html" class="nav-link">
+  数字动画插件使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/页面水印.html" class="nav-link">
+  页面水印
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue3" class="dropdown-title"><span class="title">vue3</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue3" class="mobile-dropdown-title"><span class="title">vue3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/vue3/语法学习.html" class="nav-link">
+  语法学习
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/Pinia.html" class="nav-link">
+  Pinia
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/elementPlus.html" class="nav-link">
+  elementPlus使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/axios.html" class="nav-link">
+  axios配置及使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/scss学习.html" class="nav-link">
+  scss文件自动导入
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/其他.html" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JS" class="dropdown-title"><span class="title">JS</span> <span class="arrow down"></span></button> <button type="button" aria-label="JS" class="mobile-dropdown-title"><span class="title">JS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/JS/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="REACT" class="dropdown-title"><span class="title">REACT</span> <span class="arrow down"></span></button> <button type="button" aria-label="REACT" class="mobile-dropdown-title"><span class="title">REACT</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/React/插件使用.html" class="nav-link">
+  插件使用
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="NodeJs" class="dropdown-title"><span class="title">NodeJs</span> <span class="arrow down"></span></button> <button type="button" aria-label="NodeJs" class="mobile-dropdown-title"><span class="title">NodeJs</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/NodeJs/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/Java/基础学习.html" class="nav-link">
+  基础学习
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Java/基础语法.html" class="nav-link">
+  基础语法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="微信小程序" class="dropdown-title"><span class="title">微信小程序</span> <span class="arrow down"></span></button> <button type="button" aria-label="微信小程序" class="mobile-dropdown-title"><span class="title">微信小程序</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/WeChatMiniProgram/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/Other/Vsode插件.html" class="nav-link">
+  Vsode插件
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Other/VuePress学习.html" class="nav-link">
+  VuePress学习
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/grbk/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/视频播放.html" class="nav-link">
+  视频播放功能
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/视频播放.html" class="nav-link">
+  数字动画插件使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/页面水印.html" class="nav-link">
+  页面水印
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue3" class="dropdown-title"><span class="title">vue3</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue3" class="mobile-dropdown-title"><span class="title">vue3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/vue3/语法学习.html" class="nav-link">
+  语法学习
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/Pinia.html" class="nav-link">
+  Pinia
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/elementPlus.html" class="nav-link">
+  elementPlus使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/axios.html" class="nav-link">
+  axios配置及使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/scss学习.html" class="nav-link">
+  scss文件自动导入
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/其他.html" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JS" class="dropdown-title"><span class="title">JS</span> <span class="arrow down"></span></button> <button type="button" aria-label="JS" class="mobile-dropdown-title"><span class="title">JS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/JS/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="REACT" class="dropdown-title"><span class="title">REACT</span> <span class="arrow down"></span></button> <button type="button" aria-label="REACT" class="mobile-dropdown-title"><span class="title">REACT</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/React/插件使用.html" class="nav-link">
+  插件使用
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="NodeJs" class="dropdown-title"><span class="title">NodeJs</span> <span class="arrow down"></span></button> <button type="button" aria-label="NodeJs" class="mobile-dropdown-title"><span class="title">NodeJs</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/NodeJs/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/Java/基础学习.html" class="nav-link">
+  基础学习
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Java/基础语法.html" class="nav-link">
+  基础语法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="微信小程序" class="dropdown-title"><span class="title">微信小程序</span> <span class="arrow down"></span></button> <button type="button" aria-label="微信小程序" class="mobile-dropdown-title"><span class="title">微信小程序</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/WeChatMiniProgram/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/Other/Vsode插件.html" class="nav-link">
+  Vsode插件
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Other/VuePress学习.html" class="nav-link">
+  VuePress学习
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Java</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/grbk/Java/基础学习.html" class="sidebar-link">基础知识</a></li><li><a href="/grbk/Java/基础语法.html" class="active sidebar-link">基础语法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/grbk/Java/基础语法.html#_1-注释" class="sidebar-link">1.注释</a></li><li class="sidebar-sub-header"><a href="/grbk/Java/基础语法.html#_2-关键字" class="sidebar-link">2.关键字</a></li><li class="sidebar-sub-header"><a href="/grbk/Java/基础语法.html#_3-字面量" class="sidebar-link">3.字面量</a></li><li class="sidebar-sub-header"><a href="/grbk/Java/基础语法.html#_4-变量" class="sidebar-link">4.变量</a></li><li class="sidebar-sub-header"><a href="/grbk/Java/基础语法.html#_5-数据类型" class="sidebar-link">5.数据类型</a></li><li class="sidebar-sub-header"><a href="/grbk/Java/基础语法.html#_6-标识符" class="sidebar-link">6.标识符</a></li><li class="sidebar-sub-header"><a href="/grbk/Java/基础语法.html#_7-键盘录入" class="sidebar-link">7.键盘录入</a></li><li class="sidebar-sub-header"><a href="/grbk/Java/基础语法.html#n-计算机的存储规则" class="sidebar-link">n.计算机的存储规则</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="基础语法"><a href="#基础语法" class="header-anchor">#</a> 基础语法</h1> <h2 id="_1-注释"><a href="#_1-注释" class="header-anchor">#</a> 1.注释</h2> <div class="language- extra-class"><pre class="language-text"><code>单行注释  //注释信息
+多行注释  /* 注释信息 */
+文档注释  /** 注释信息 */
+</code></pre></div><h2 id="_2-关键字"><a href="#_2-关键字" class="header-anchor">#</a> 2.关键字</h2> <h3 id="_2-1介绍"><a href="#_2-1介绍" class="header-anchor">#</a> 2.1介绍</h3> <div class="language- extra-class"><pre class="language-text"><code>关键字是被Java赋予了特定涵义的英文单词
+</code></pre></div><h3 id="_2-2特定"><a href="#_2-2特定" class="header-anchor">#</a> 2.2特定</h3> <div class="language- extra-class"><pre class="language-text"><code>1.关键字的字母全部小写
+2.常见的代码编辑器，针对关键字有特殊的颜色标记，非常直观。
+</code></pre></div><h3 id="_2-3关键字的介绍"><a href="#_2-3关键字的介绍" class="header-anchor">#</a> 2.3关键字的介绍</h3> <div class="language- extra-class"><pre class="language-text"><code>class:用于(创建/定义)一个类，类是Java最基本的组成单元。后面跟随类名
+</code></pre></div><h2 id="_3-字面量"><a href="#_3-字面量" class="header-anchor">#</a> 3.字面量</h2> <h3 id="_3-1-字面量的类型"><a href="#_3-1-字面量的类型" class="header-anchor">#</a> 3.1.字面量的类型</h3> <table><thead><tr><th><strong>字面量类型</strong></th> <th><strong>说明</strong></th> <th><strong>程序中的写法</strong></th></tr></thead> <tbody><tr><td>整数</td> <td>不带小数的数字</td> <td>666，-88</td></tr> <tr><td>小数</td> <td>带小数的数字</td> <td>13.14，-5.21</td></tr> <tr><td>字符</td> <td>必须使用单引号，有且仅能一个字符</td> <td>‘A’，‘0’，   ‘我’</td></tr> <tr><td>字符串</td> <td>必须使用双引号，内容可有可无</td> <td>“HelloWorld”，“黑马程序员”</td></tr> <tr><td>布尔值</td> <td>布尔值，表示真假，只有两个值：true，false</td> <td>true 、false</td></tr> <tr><td>空值</td> <td>一个特殊的值，空值</td> <td>值是：null</td></tr></tbody></table> <h3 id="_3-2区分方法"><a href="#_3-2区分方法" class="header-anchor">#</a> 3.2区分方法</h3> <div class="language- extra-class"><pre class="language-text"><code>1. 不带小数点的数字都是整数类型的字面量。
+2. 只要带了小数点，那么就是小数类型的字面量。
+3. 只要用双引号引起来的，不管里面的内容是什么，不管里面有没有内容，都是字符串类型的字面量。
+4. 字符类型的字面量必须用单引号引起来，不管内容是什么，但是个数有且只能有一个。
+5. 字符类型的字面量只有两个值，true、false。
+6. 空类型的字面量只有一个值，null。
+</code></pre></div><h3 id="_3-3特殊字符"><a href="#_3-3特殊字符" class="header-anchor">#</a> 3.3特殊字符</h3> <h4 id="_3-3-1-t-制表符"><a href="#_3-3-1-t-制表符" class="header-anchor">#</a> 3.3.1  '\t' (制表符)</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token number">1.</span>介绍
+ 在打印时，把前面字符串的长度补齐到<span class="token number">8</span><span class="token punctuation">,</span>或者是<span class="token number">8</span>的倍数。最少补<span class="token number">1</span>个空格，最多补<span class="token number">8</span>个空格
+
+<span class="token number">2.</span>使用
+<span class="token keyword">public</span> <span class="token keyword">class</span> helloWorld <span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;123&quot;</span> <span class="token operator">+</span> <span class="token char">'\t'</span> <span class="token operator">+</span> <span class="token string">&quot;cc&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;12&quot;</span> <span class="token operator">+</span> <span class="token char">'\t'</span> <span class="token operator">+</span> <span class="token string">&quot;dd&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+打印的结果
+<span class="token number">123</span>     cc
+<span class="token number">12</span>      dd
+
+
+</code></pre></div><h4 id="_3-3-2-r"><a href="#_3-3-2-r" class="header-anchor">#</a> 3.3.2  ' \r'</h4> <div class="language- extra-class"><pre class="language-text"><code>1.介绍
+将当前位置移到本行开头。又叫回车，对应键盘上的return键
+</code></pre></div><h4 id="_3-3-3-n"><a href="#_3-3-3-n" class="header-anchor">#</a> 3.3.3  '\n'</h4> <div class="language- extra-class"><pre class="language-text"><code>1.介绍
+将当前位置移到下一行开头。又叫换行，newline。
+</code></pre></div><h2 id="_4-变量"><a href="#_4-变量" class="header-anchor">#</a> 4.变量</h2> <h3 id="_4-1介绍"><a href="#_4-1介绍" class="header-anchor">#</a> 4.1介绍</h3> <div class="language- extra-class"><pre class="language-text"><code>变量就在程序中临时存储数据的容器。但是这个容器中只能存一个值。
+</code></pre></div><h3 id="_4-2定义格式"><a href="#_4-2定义格式" class="header-anchor">#</a> 4.2定义格式</h3> <div class="language- extra-class"><pre class="language-text"><code>数据类型 变量名 = 数据值；
+</code></pre></div><h3 id="_4-3注意事项"><a href="#_4-3注意事项" class="header-anchor">#</a> 4.3注意事项</h3> <div class="language- extra-class"><pre class="language-text"><code>1.只能存在一个值
+2.变量名不允许重复定义
+3.一条语句可以定义多个变量
+4.变量在使用之前一定进行赋值
+5.变量的作用域范围
+</code></pre></div><h2 id="_5-数据类型"><a href="#_5-数据类型" class="header-anchor">#</a> 5.数据类型</h2> <h3 id="_5-1基本数据类型-四类八种"><a href="#_5-1基本数据类型-四类八种" class="header-anchor">#</a> 5.1基本数据类型(四类八种)</h3> <table><thead><tr><th style="text-align:center;">数据类型</th> <th style="text-align:center;">关键字</th> <th style="text-align:center;">内存占用</th> <th style="text-align:center;">取值范围</th></tr></thead> <tbody><tr><td style="text-align:center;">整数</td> <td style="text-align:center;">byte</td> <td style="text-align:center;">1</td> <td style="text-align:center;">负的2的7次方 ~ 2的7次方-1(-128~127)</td></tr> <tr><td style="text-align:center;"></td> <td style="text-align:center;">short</td> <td style="text-align:center;">2</td> <td style="text-align:center;">负的2的15次方 ~ 2的15次方-1(-32768~32767)</td></tr> <tr><td style="text-align:center;"></td> <td style="text-align:center;"><strong>int(默认)</strong></td> <td style="text-align:center;">4</td> <td style="text-align:center;">负的2的31次方 ~ 2的31次方-1</td></tr> <tr><td style="text-align:center;"></td> <td style="text-align:center;">long</td> <td style="text-align:center;">8</td> <td style="text-align:center;">负的2的63次方 ~ 2的63次方-1</td></tr> <tr><td style="text-align:center;">浮点数</td> <td style="text-align:center;">float</td> <td style="text-align:center;">4</td> <td style="text-align:center;">1.401298e-45 ~ 3.402823e+38</td></tr> <tr><td style="text-align:center;"></td> <td style="text-align:center;"><strong>double(默认)</strong></td> <td style="text-align:center;">8</td> <td style="text-align:center;">4.9000000e-324 ~ 1.797693e+308</td></tr> <tr><td style="text-align:center;">字符</td> <td style="text-align:center;">char</td> <td style="text-align:center;">2</td> <td style="text-align:center;">0-65535</td></tr> <tr><td style="text-align:center;">布尔</td> <td style="text-align:center;">boolean</td> <td style="text-align:center;">1</td> <td style="text-align:center;">true，false</td></tr></tbody></table> <h4 id="_5-1-1使用"><a href="#_5-1-1使用" class="header-anchor">#</a> 5.1.1使用</h4> <div class="language- extra-class"><pre class="language-text"><code>byte    a = -100
+short   b = 12
+int     c = 123
+long    n = 999999999L
+float   f = 10.1F
+double  d = 20.1
+char    e = '中'
+boolean h = false
+</code></pre></div><h4 id="_5-1-2注意"><a href="#_5-1-2注意" class="header-anchor">#</a> 5.1.2注意</h4> <div class="language- extra-class"><pre class="language-text"><code>1.定义long类型的值时，需要在数据值后面加L作为后缀,L大小写都可以。
+2.定义float类型的值时，需要在数据值后面加F作为后缀,F大小写都可以。
+</code></pre></div><h4 id="_5-1-3整数类型和小数类型的取值范围大小关系"><a href="#_5-1-3整数类型和小数类型的取值范围大小关系" class="header-anchor">#</a> 5.1.3整数类型和小数类型的取值范围大小关系</h4> <div class="language- extra-class"><pre class="language-text"><code>double &gt; float &gt; long &gt; int &gt; short &gt; byte
+</code></pre></div><h3 id="_5-2引用数据类型"><a href="#_5-2引用数据类型" class="header-anchor">#</a> 5.2引用数据类型</h3> <h2 id="_6-标识符"><a href="#_6-标识符" class="header-anchor">#</a> 6.标识符</h2> <h3 id="_6-1定义"><a href="#_6-1定义" class="header-anchor">#</a> 6.1定义</h3> <div class="language- extra-class"><pre class="language-text"><code>标识符是给类、方法、变量起得名字
+</code></pre></div><h3 id="_6-2命名规则"><a href="#_6-2命名规则" class="header-anchor">#</a> 6.2命名规则</h3> <div class="language- extra-class"><pre class="language-text"><code>1.硬性要求
+	a.必须由数字、字母、下划线_、美元符号$组成
+	b.数字不能开头
+	c.不能是关键字
+	d.区分大小写的
+2.软性要求
+	a.小驼峰命名法:方法、变量(例子:name、firstName)
+	b.大驼峰命名法:类名(例子:Student、GoodStudent)
+    c.尽量见名之意
+</code></pre></div><h2 id="_7-键盘录入"><a href="#_7-键盘录入" class="header-anchor">#</a> 7.键盘录入</h2> <p>7.1介绍</p> <div class="language- extra-class"><pre class="language-text"><code>Java中存在一个Scanner类接收键盘输入的数字
+</code></pre></div><p>7.2使用</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//导入Scanner包</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ScannerDemol</span><span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token comment">// 创建对象</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">// 接收数据</span>
+		<span class="token comment">// i,j记录键盘录入的数据</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;请输入整数1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">int</span> i <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;请输入整数2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">int</span> j <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 输入数据</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i <span class="token operator">+</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="n-计算机的存储规则"><a href="#n-计算机的存储规则" class="header-anchor">#</a> n.计算机的存储规则</h2> <div class="language- extra-class"><pre class="language-text"><code>1.存储的数据类型
+text文本:数字(转为二进制)、字母(对应码表转成二进制)、汉字(对应码表转成二进制)
+image图片:黑白图、灰度图、彩色图
+Sound声音:波长数据
+
+2.存储的数据格式
+任意的数据都是以二进制的形式存储的
+
+3.计算机的三原色
+ a.计算机中的颜色采用光学三原色
+ b.分别为:红、绿、蓝。称为RGB
+ c.写法:(255,255,255)或(FFFFFF)
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2024-12-29 22:03:33</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/grbk/Java/基础学习.html" class="prev">
+        基础知识
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/grbk/assets/js/app.71b1c8e5.js" defer></script><script src="/grbk/assets/js/2.dcc9a4f0.js" defer></script><script src="/grbk/assets/js/1.0fa2d0d7.js" defer></script><script src="/grbk/assets/js/32.5b817f73.js" defer></script><script src="/grbk/assets/js/24.bcc58448.js" defer></script>
+  </body>
+</html>
