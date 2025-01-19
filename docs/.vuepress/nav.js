@@ -87,7 +87,11 @@ module.exports = [
       {
         text: '基础语法',
         link: '/Java/基础语法.md'
-      }
+      },
+      {
+        text: '内置类',
+        link: '/Java/内置类.md'
+      },
     ]
   },
   {
