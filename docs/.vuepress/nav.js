@@ -92,6 +92,10 @@ module.exports = [
         text: '内置类',
         link: '/Java/内置类.md'
       },
+      {
+        text: '方法例子',
+        link: '/Java/方法例子.md'
+      }
     ]
   },
   {
