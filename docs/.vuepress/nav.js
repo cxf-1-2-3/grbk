@@ -1,10 +1,11 @@
 module.exports = [
   { text: 'Home', link: '/' },
+  // vue
   {
     text: 'vue',
     items: [
       {
-        text: 'Vue',
+        text: '基础知识',
         link: '/vue/'
       },
       {
@@ -18,9 +19,14 @@ module.exports = [
       {
         text: '页面水印',
         link: '/vue/页面水印.md'
+      },
+      {
+        text: '音频播放',
+        link: '/vue/音频播放.md'
       }
     ]
   },
+  // vue3
   {
     text: 'vue3',
     items: [
@@ -107,6 +113,7 @@ module.exports = [
       }
     ]
   },
+  // 其他
   {
     text: '其他',
     items: [
@@ -117,6 +124,18 @@ module.exports = [
       {
         text: 'VuePress学习',
         link: '/Other/VuePress学习.md'
+      },
+      {
+        text: 'deepseek学习',
+        link: '/Other/deepseek学习.md'
+      },
+      {
+        text: '激活window',
+        link: '/Other/激活window.md'
+      },
+      {
+        text: '面试题',
+        link: '/Other/面试题.md'
       }
     ]
   }
