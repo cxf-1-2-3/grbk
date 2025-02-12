@@ -56,12 +56,21 @@ module.exports = [
       }
     ]
   },
+  // JS
   {
     text: 'JS',
     items: [
       {
         text: '基础知识',
         link: '/JS/基础知识.md'
+      },
+      {
+        text: '属性',
+        link: '/JS/属性.md'
+      },
+      {
+        text: '实现响应式数据效果',
+        link: '/JS/实现响应式数据效果.md'
       }
     ]
   },
