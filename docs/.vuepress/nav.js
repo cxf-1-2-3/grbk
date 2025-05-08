@@ -71,7 +71,15 @@ module.exports = [
       {
         text: '实现响应式数据效果',
         link: '/JS/实现响应式数据效果.md'
-      }
+      },
+      {
+        text: '模块化',
+        link: '/JS/模块化.md'
+      },
+      {
+        text: '包管理工具',
+        link: '/JS/包管理工具.md'
+      },
     ]
   },
   {
