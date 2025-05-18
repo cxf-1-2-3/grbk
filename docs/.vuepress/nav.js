@@ -65,6 +65,10 @@ module.exports = [
         link: '/JS/基础知识.md'
       },
       {
+        text: '数组方法',
+        link: '/JS/数组方法.md'
+      },
+      {
         text: '属性',
         link: '/JS/属性.md'
       },
@@ -79,7 +83,7 @@ module.exports = [
       {
         text: '包管理工具',
         link: '/JS/包管理工具.md'
-      },
+      }
     ]
   },
   {
