@@ -2,104 +2,247 @@
 autoPrev: 语法学习
 ---
 
-# 状态管理库Pinia
+# Pinia
 ## 	1.介绍
 
-```
-介绍
-Pinia是vue的状态管理库，是Vuex状态管理库的替代
+* **介绍**
+  * Pinia是vue的状态管理库，是Vuex状态管理库的替代
+* **优势**
+  * 提供更加简单的API(去掉了mutation)
+  * 提供符合组合式风格的API
+  * 去掉了modules的概念，每个store都是一个独立的模块
+  * 搭配TypeScript一起使用提供可靠的类型推断
 
-优势
-1.提供更加简单的API(去掉了mutation)
-2.提供符合组合式风格的API
-3.去掉了modules的概念，每个store都是一个独立的模块
-4.搭配TypeScript一起使用提供可靠的类型推断
-```
 ## 2.使用
 
-```vue
-1.安装
-npm install pinia
+* **安装依赖**
 
-2.创建一个 pinia 实例
-import './assets/main.css'
-import { createApp } from 'vue'
-import App from './App.vue'
-// 导入createPinia
-import { createPinia } from 'pinia'
-// 创建实例
-const pinia = createPinia()
-// 挂载pinia到app应用中
-createApp(App).use(pinia).mount('#app')
+  ```
+  npm install pinia
+  ```
 
-3.定义Store(state+action)
-在Stores文件夹下创建counter.js文件
-// 导入一个方法 defineStore
-import { defineStore } from 'pinia'
-import { computed, ref } from 'vue'
+* **在`src`目录下创建`stores`文件夹，并初始化 Pinia**
 
-export const useCounter = defineStore('counter', () => {
-  //定义数据(state)
-  const count = ref(0)
-  // 定义修改数据的方法(action 同步和异步)
-  const increment = () => {
-    count.value += 1
+  ```javascript
+  // src/stores/index.js 位置
+  import { createPinia } from 'pinia';
+  
+  const pinia = createPinia();
+  export default pinia;
+  ```
+
+* **在`main.js`中注册 Pinia：**
+
+  ```javascript
+  // src/main.js 位置
+  import { createApp } from 'vue';
+  import App from './App.vue';
+  import pinia from './stores'; // 引入Pinia
+  
+  createApp(App)
+    .use(pinia) // 注册Pinia
+    .mount('#app');
+  ```
+
+* **创建 Store：**
+
+  ```javascript
+  // src/stores/counter.js 位置
+  import { defineStore } from 'pinia'
+  export const useCounterStore = defineStore('counter', {
+      // 状态
+      state: () => ({
+        count: 0,
+        name: 'Vue 3 + Pinia'
+      }),
+      // 计算属性
+      getters: {
+        doubleCount: (state) => state.count * 2
+      },
+      // 方法（可以是同步或异步）
+      actions: {
+        increment() {
+          this.count++
+        },
+        decrement() {
+          this.count--
+        },
+        async asyncIncrement() {
+          await new Promise((resolve) => setTimeout(resolve, 1000))
+          this.count++
+        }
+      }
+    })
+  
+  ```
+  
+* **组件使用Store：**
+
+  ```javascript
+  <template>
+    <div>
+      <h1>{{ store.name }}</h1>
+      <p>Count: {{ store.count }}</p>
+      <p>Double Count: {{ store.doubleCount }}</p>
+      <button @click="store.increment">+1</button>
+      <button @click="store.decrement">-1</button>
+      <button @click="store.asyncIncrement">Async +1</button>
+    </div>
+  </template>
+  
+  <script setup>
+  import { useCounterStore } from '../stores/counter';
+  
+  // 获取store实例
+  const store = useCounterStore();
+  </script>
+  ```
+* **解构 Store（保留响应式）:**
+
+  * **直接解构 Store 会失去响应式，需使用`storeToRefs`：**
+
+  ```javascript
+  <script setup>
+  import { useCounterStore } from '../stores/counter';
+  import { storeToRefs } from 'pinia';
+  // 获取store实例
+  const store = useCounterStore();
+  // 使用storeToRefs解构state和getters（保留响应式）
+  const { name, count, doubleCount } = storeToRefs(store);
+  //  解构actions（无需storeToRefs）
+  const { increment, decrement } = store;
+  const add = () => { 
+    increment()
   }
-  // getter定义
-  const getterCount = computed(() => count.value * 2)
-    // 以对象的方法return提供组件使用
-  return {
-    count,
-    increment,
-    getterCount
+  const del = () => { 
+    decrement()
   }
+  
+  </script>
+  ```
 
-})
+* **在非组件环境使用**
 
+  ```javascript
+  // utils/api.js
+  import { useCounterStore } from '@/stores/counter'
+  import { createPinia } from 'pinia'
+  
+  const pinia = createPinia()
+  const counterStore = useCounterStore(pinia)
+  
+  export const getCount = () => {
+    return counterStore.count
+  }
+  
+  export const getDoubleCount = () => {
+    return counterStore.doubleCount
+  }
+  ```
 
-4.组件使用Store
-<script setup>
-// 导入pinia
-import { useCounter } from '@/Stores/counter.js'
+* **监听 Store 变化**
 
-const Counter = useCounter()
-console.log(Counter);
+  * **使用`$subscribe`监听 state 变化，或使用`$onAction`监听 action 调用：**
 
-</script>
-<template>
-  <button @click="Counter.increment">{{ Counter.count }}</button>
-  <div>
-    {{ Counter.getterCount }}
-  </div>
-</template>
+  ```javascript
+  <script setup>
+  import { useCounterStore } from '../stores/counter';
+  
+  const store = useCounterStore();
+  // 监听state变化
+  store.$subscribe((mutation, state) => {
+    // mutation 是当前的mutation对象
+    // state 是当前的state对象
+    console.log(mutation, state);
+  })
+  
+  // 监听action调用
+  store.$onAction(({ name, store, args, after, onError, afterError }) => {
+    // action相关信息
+    // name: 当前action的名称
+    // store: 当前store实例
+    // args: 当前action的参数
+    // after: 当前action执行成功后的回调
+    after((result) => {
+      console.log(`Action ${name} succeeded with result:`, result);
+    });
+    // onError: 当前action执行失败时的错误处理
+    onError((error) => {
+      console.log(`Action ${name} failed with error:`, error);
+    });
+    // afterError: 当前action执行失败后的错误处理 
+  })
+  </script>
+  ```
 
-<style scoped></style>
+* **使用`$reset()`方法重置 store 到初始状态：**
 
-5.storeToRefs
-介绍
-使用storeToRefs函数可以辅助保持数据(state+getter)的响应式解构
+  ```javascript
+  <script setup>
+  import { useCounterStore } from '../stores/counter';
+  
+  const store = useCounterStore();
+  
+  const resetStore = () => {
+    store.$reset(); // 重置为初始状态
+  };
+  </script>
+  ```
 
-定义
-const { 解构数据 } = storeToRefs(Counter)
+* **动态修改 State**
 
-使用
-<script setup>
-// 导入pinia
-import { useCounter } from '@/Stores/counter.js'
-import { storeToRefs } from 'pinia';
+  * **除了通过 actions 修改 state，还可以直接修改：**
 
-const Counter = useCounter()
-//解构赋值保存响应式数据
-const { count, getterCount } = storeToRefs(Counter)
-// 方法的解构赋值
-const { increment } = Counter
-console.log(Counter);
+  ```javascript
+  <script setup>
+  import { useCounterStore } from '../stores/counter';
+  
+  const store = useCounterStore();
+  
+  // 直接修改state（不推荐，建议通过actions）
+  const incrementBy = (amount) => {
+    store.count += amount;
+  };
+  
+  // 使用$patch批量修改（推荐）
+  const updateState = () => {
+    store.$patch({
+      count: store.count + 10,
+      name: 'Updated Name'
+    });
+    
+    // 或使用函数式$patch
+    store.$patch((state) => {
+      state.count += 10;
+      state.name = 'Updated Name';
+    });
+  };
+  </script>
+  ```
 
-</script>
-<template>
-  <button @click="increment">{{ count }}</button>
-  <div>
-    {{ getterCount }}
-  </div>
-</template>
-```
+* **在 setup () 中使用 Store：**
+
+  ```javascript
+  <template>
+    <div>
+      <p>Count: {{ count }}</p>
+      <button @click="increment">+1</button>
+    </div>
+  </template>
+  
+  <script>
+  import { useCounterStore } from '../stores/counter';
+  
+  export default {
+    setup() {
+      const store = useCounterStore();
+      
+      return {
+        count: store.count,
+        increment: store.increment,
+      };
+    },
+  };
+  </script>
+  ```
+

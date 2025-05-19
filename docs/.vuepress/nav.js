@@ -155,6 +155,10 @@ module.exports = [
         link: '/Other/激活window.md'
       },
       {
+        text: 'Cursor',
+        link: '/Other/Cursor.md'
+      },
+      {
         text: '面试题',
         link: '/Other/面试题.md'
       }

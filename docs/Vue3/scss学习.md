@@ -3,28 +3,44 @@ autoPrev: axios
 ---
 # scss文件自动导入
 
-## 1.创建一个var.scss文件
+## 1.安装依赖
+
+```
+npm install --save-dev sass sass-loader
+```
+
+## 2.创建一个var.scss文件
 
 ```scss
 $xtxColor: #27ba9b;
 $helpCplpr: #ffb302;
 ```
 
-## 2.在vite.config.js文件中配置
+## 3.在vite.config.js文件中配置
 
 ```js
-css: {
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import path from 'path'
+export default defineConfig({
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+  },
+  css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `
-        @use "@/styles/var.scss" as *;
-        `
+        additionalData: `@import "@/styles/var.scss";` // 替换为您的SCSS文件路径
       }
     }
   }
+})
+
 ```
 
-## 3.使用
+## 4.使用
 
 ```vue
 <template>
@@ -37,7 +53,7 @@ css: {
 </style>
 ```
 
-## 4.注意
+## 5.注意
 
 ```
 使用时必须配置lang="scss"
