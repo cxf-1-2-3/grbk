@@ -86,6 +86,7 @@ module.exports = [
       }
     ]
   },
+  // React
   {
     text: 'REACT',
     items: [
@@ -95,6 +96,7 @@ module.exports = [
       }
     ]
   },
+  // NodeJs
   {
     text: 'NodeJs',
     items: [
@@ -104,6 +106,7 @@ module.exports = [
       }
     ]
   },
+  // Java
   {
     text: 'Java',
     items: [
@@ -125,12 +128,23 @@ module.exports = [
       }
     ]
   },
+  // 微信小程序
   {
     text: '微信小程序',
     items: [
       {
         text: '基础知识',
         link: '/WeChatMiniProgram/基础知识.md'
+      }
+    ]
+  },
+  // uniapp
+  {
+    text: 'uniapp',
+    items: [
+      {
+        text: '基础知识',
+        link: '/uniapp/基础知识.md'
       }
     ]
   },
