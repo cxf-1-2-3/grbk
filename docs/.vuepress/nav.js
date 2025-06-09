@@ -148,6 +148,16 @@ module.exports = [
       }
     ]
   },
+  // TS
+  {
+    text: 'TS',
+    items: [
+      {
+        text: '基础知识',
+        link: '/TS/基础知识.md'
+      }
+    ]
+  },
   // 其他
   {
     text: '其他',
