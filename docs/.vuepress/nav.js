@@ -155,6 +155,10 @@ module.exports = [
       {
         text: '基础知识',
         link: '/TS/基础知识.md'
+      },
+      {
+        text: '装饰器',
+        link: '/TS/装饰器.md'
       }
     ]
   },
