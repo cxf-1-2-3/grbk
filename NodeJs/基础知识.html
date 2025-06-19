@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NodeJS学习 | 小陈同学</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/grbk/favicon.ico">
+    <link rel="manifest" href="/grbk/manifest.json">
+    <link rel="apple-touch-icon" href="/grbk/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/grbk/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="学习笔记">
+    <meta name="author" content="小陈同学">
+    <meta name="keywords" content="学习笔记">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/grbk/assets/css/0.styles.30313964.css" as="style"><link rel="preload" href="/grbk/assets/js/app.81e1f974.js" as="script"><link rel="preload" href="/grbk/assets/js/2.79b14797.js" as="script"><link rel="preload" href="/grbk/assets/js/1.dca57fa9.js" as="script"><link rel="preload" href="/grbk/assets/js/46.9e3764e6.js" as="script"><link rel="preload" href="/grbk/assets/js/31.ae4fcb97.js" as="script"><link rel="prefetch" href="/grbk/assets/js/10.686eeb12.js"><link rel="prefetch" href="/grbk/assets/js/11.05e9c578.js"><link rel="prefetch" href="/grbk/assets/js/12.5c956deb.js"><link rel="prefetch" href="/grbk/assets/js/13.3b68fedb.js"><link rel="prefetch" href="/grbk/assets/js/14.4987eb05.js"><link rel="prefetch" href="/grbk/assets/js/15.4b23fe48.js"><link rel="prefetch" href="/grbk/assets/js/16.b1eb5436.js"><link rel="prefetch" href="/grbk/assets/js/17.e92f8911.js"><link rel="prefetch" href="/grbk/assets/js/18.8b36394b.js"><link rel="prefetch" href="/grbk/assets/js/19.9d74e8b1.js"><link rel="prefetch" href="/grbk/assets/js/20.92a514c1.js"><link rel="prefetch" href="/grbk/assets/js/21.7c3f28f1.js"><link rel="prefetch" href="/grbk/assets/js/22.6ce9cf77.js"><link rel="prefetch" href="/grbk/assets/js/23.66a3c431.js"><link rel="prefetch" href="/grbk/assets/js/24.71545939.js"><link rel="prefetch" href="/grbk/assets/js/25.7cc31de9.js"><link rel="prefetch" href="/grbk/assets/js/26.2f16959f.js"><link rel="prefetch" href="/grbk/assets/js/27.0ba5c7e6.js"><link rel="prefetch" href="/grbk/assets/js/28.9ca79113.js"><link rel="prefetch" href="/grbk/assets/js/29.977b6e6f.js"><link rel="prefetch" href="/grbk/assets/js/3.f2465e90.js"><link rel="prefetch" href="/grbk/assets/js/30.948eb745.js"><link rel="prefetch" href="/grbk/assets/js/32.65ccf191.js"><link rel="prefetch" href="/grbk/assets/js/33.c38d39b3.js"><link rel="prefetch" href="/grbk/assets/js/34.aa4d1e68.js"><link rel="prefetch" href="/grbk/assets/js/35.0c003f10.js"><link rel="prefetch" href="/grbk/assets/js/36.8bd84475.js"><link rel="prefetch" href="/grbk/assets/js/37.9581c750.js"><link rel="prefetch" href="/grbk/assets/js/38.a988d4a1.js"><link rel="prefetch" href="/grbk/assets/js/39.7b57bc41.js"><link rel="prefetch" href="/grbk/assets/js/4.8b91d238.js"><link rel="prefetch" href="/grbk/assets/js/40.65ebe77d.js"><link rel="prefetch" href="/grbk/assets/js/41.0f1d8f8d.js"><link rel="prefetch" href="/grbk/assets/js/42.eeef7aa3.js"><link rel="prefetch" href="/grbk/assets/js/43.18ad1b94.js"><link rel="prefetch" href="/grbk/assets/js/44.8896e9be.js"><link rel="prefetch" href="/grbk/assets/js/45.b8c1155b.js"><link rel="prefetch" href="/grbk/assets/js/47.885ce2f1.js"><link rel="prefetch" href="/grbk/assets/js/48.de3e9b8a.js"><link rel="prefetch" href="/grbk/assets/js/49.614122c4.js"><link rel="prefetch" href="/grbk/assets/js/5.8875fa06.js"><link rel="prefetch" href="/grbk/assets/js/50.f6865d52.js"><link rel="prefetch" href="/grbk/assets/js/51.931af51c.js"><link rel="prefetch" href="/grbk/assets/js/52.7e9731d4.js"><link rel="prefetch" href="/grbk/assets/js/53.bc0d695d.js"><link rel="prefetch" href="/grbk/assets/js/54.cad6a72f.js"><link rel="prefetch" href="/grbk/assets/js/55.ef1cfc1c.js"><link rel="prefetch" href="/grbk/assets/js/56.03263bee.js"><link rel="prefetch" href="/grbk/assets/js/57.683f1318.js"><link rel="prefetch" href="/grbk/assets/js/58.8a4acd59.js"><link rel="prefetch" href="/grbk/assets/js/59.8e191daa.js"><link rel="prefetch" href="/grbk/assets/js/6.14aaf6c6.js"><link rel="prefetch" href="/grbk/assets/js/60.e10f285e.js"><link rel="prefetch" href="/grbk/assets/js/61.520cfa85.js"><link rel="prefetch" href="/grbk/assets/js/62.36ac0237.js"><link rel="prefetch" href="/grbk/assets/js/63.d50f0180.js"><link rel="prefetch" href="/grbk/assets/js/64.ae8a2121.js"><link rel="prefetch" href="/grbk/assets/js/65.95f5e345.js"><link rel="prefetch" href="/grbk/assets/js/66.15ac5e6e.js"><link rel="prefetch" href="/grbk/assets/js/67.92e3e214.js"><link rel="prefetch" href="/grbk/assets/js/7.20f47704.js"><link rel="prefetch" href="/grbk/assets/js/vendors~docsearch.ab106e62.js">
+    <link rel="stylesheet" href="/grbk/assets/css/0.styles.30313964.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/grbk/" class="home-link router-link-active"><img src="/grbk/assets/img/hero.png" alt="小陈同学" class="logo"> <span class="site-name can-hide">小陈同学</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/grbk/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/vue/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/视频播放.html" class="nav-link">
+  视频播放功能
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/视频播放.html" class="nav-link">
+  数字动画插件使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/页面水印.html" class="nav-link">
+  页面水印
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/音频播放.html" class="nav-link">
+  音频播放
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue3" class="dropdown-title"><span class="title">vue3</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue3" class="mobile-dropdown-title"><span class="title">vue3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/vue3/语法学习.html" class="nav-link">
+  语法学习
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/Pinia.html" class="nav-link">
+  Pinia
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/elementPlus.html" class="nav-link">
+  elementPlus使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/axios.html" class="nav-link">
+  axios配置及使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/scss学习.html" class="nav-link">
+  scss文件自动导入
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/其他.html" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JS" class="dropdown-title"><span class="title">JS</span> <span class="arrow down"></span></button> <button type="button" aria-label="JS" class="mobile-dropdown-title"><span class="title">JS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/JS/基础知识.html" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/JS/数组方法.html" class="nav-link">
+  数组方法
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/JS/属性.html" class="nav-link">
+  属性
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/JS/实现响应式数据效果.html" class="nav-link">
+  实现响应式数据效果
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/JS/模块化.html" class="nav-link">
+  模块化
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/JS/包管理工具.html" class="nav-link">
+  包管理工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="REACT" class="dropdown-title"><span class="title">REACT</span> <span class="arrow down"></span></button> <button type="button" aria-label="REACT" class="mobile-dropdown-title"><span class="title">REACT</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/React/插件使用.html" class="nav-link">
+  插件使用
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="NodeJs" class="dropdown-title"><span class="title">NodeJs</span> <span class="arrow down"></span></button> <button type="button" aria-label="NodeJs" class="mobile-dropdown-title"><span class="title">NodeJs</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/NodeJs/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/Java/基础学习.html" class="nav-link">
+  基础学习
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Java/基础语法.html" class="nav-link">
+  基础语法
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Java/内置类.html" class="nav-link">
+  内置类
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Java/方法例子.html" class="nav-link">
+  方法例子
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="微信小程序" class="dropdown-title"><span class="title">微信小程序</span> <span class="arrow down"></span></button> <button type="button" aria-label="微信小程序" class="mobile-dropdown-title"><span class="title">微信小程序</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/WeChatMiniProgram/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="uniapp" class="dropdown-title"><span class="title">uniapp</span> <span class="arrow down"></span></button> <button type="button" aria-label="uniapp" class="mobile-dropdown-title"><span class="title">uniapp</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/uniapp/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TS" class="dropdown-title"><span class="title">TS</span> <span class="arrow down"></span></button> <button type="button" aria-label="TS" class="mobile-dropdown-title"><span class="title">TS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/TS/基础知识.html" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/TS/装饰器.html" class="nav-link">
+  装饰器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/Other/Vsode插件.html" class="nav-link">
+  Vsode插件
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Other/VuePress学习.html" class="nav-link">
+  VuePress学习
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Other/deepseek学习.html" class="nav-link">
+  deepseek学习
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Other/激活window.html" class="nav-link">
+  激活window
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Other/Cursor.html" class="nav-link">
+  Cursor
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Other/面试题.html" class="nav-link">
+  面试题
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/grbk/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/vue/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/视频播放.html" class="nav-link">
+  视频播放功能
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/视频播放.html" class="nav-link">
+  数字动画插件使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/页面水印.html" class="nav-link">
+  页面水印
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue/音频播放.html" class="nav-link">
+  音频播放
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue3" class="dropdown-title"><span class="title">vue3</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue3" class="mobile-dropdown-title"><span class="title">vue3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/vue3/语法学习.html" class="nav-link">
+  语法学习
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/Pinia.html" class="nav-link">
+  Pinia
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/elementPlus.html" class="nav-link">
+  elementPlus使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/axios.html" class="nav-link">
+  axios配置及使用
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/scss学习.html" class="nav-link">
+  scss文件自动导入
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/vue3/其他.html" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JS" class="dropdown-title"><span class="title">JS</span> <span class="arrow down"></span></button> <button type="button" aria-label="JS" class="mobile-dropdown-title"><span class="title">JS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/JS/基础知识.html" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/JS/数组方法.html" class="nav-link">
+  数组方法
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/JS/属性.html" class="nav-link">
+  属性
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/JS/实现响应式数据效果.html" class="nav-link">
+  实现响应式数据效果
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/JS/模块化.html" class="nav-link">
+  模块化
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/JS/包管理工具.html" class="nav-link">
+  包管理工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="REACT" class="dropdown-title"><span class="title">REACT</span> <span class="arrow down"></span></button> <button type="button" aria-label="REACT" class="mobile-dropdown-title"><span class="title">REACT</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/React/插件使用.html" class="nav-link">
+  插件使用
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="NodeJs" class="dropdown-title"><span class="title">NodeJs</span> <span class="arrow down"></span></button> <button type="button" aria-label="NodeJs" class="mobile-dropdown-title"><span class="title">NodeJs</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/NodeJs/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/Java/基础学习.html" class="nav-link">
+  基础学习
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Java/基础语法.html" class="nav-link">
+  基础语法
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Java/内置类.html" class="nav-link">
+  内置类
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Java/方法例子.html" class="nav-link">
+  方法例子
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="微信小程序" class="dropdown-title"><span class="title">微信小程序</span> <span class="arrow down"></span></button> <button type="button" aria-label="微信小程序" class="mobile-dropdown-title"><span class="title">微信小程序</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/WeChatMiniProgram/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="uniapp" class="dropdown-title"><span class="title">uniapp</span> <span class="arrow down"></span></button> <button type="button" aria-label="uniapp" class="mobile-dropdown-title"><span class="title">uniapp</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/uniapp/基础知识.html" class="nav-link">
+  基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TS" class="dropdown-title"><span class="title">TS</span> <span class="arrow down"></span></button> <button type="button" aria-label="TS" class="mobile-dropdown-title"><span class="title">TS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/TS/基础知识.html" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/TS/装饰器.html" class="nav-link">
+  装饰器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/grbk/Other/Vsode插件.html" class="nav-link">
+  Vsode插件
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Other/VuePress学习.html" class="nav-link">
+  VuePress学习
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Other/deepseek学习.html" class="nav-link">
+  deepseek学习
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Other/激活window.html" class="nav-link">
+  激活window
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Other/Cursor.html" class="nav-link">
+  Cursor
+</a></li><li class="dropdown-item"><!----> <a href="/grbk/Other/面试题.html" class="nav-link">
+  面试题
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Node Js</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/grbk/NodeJs/基础知识.html" class="active sidebar-link">NodeJS学习</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/grbk/NodeJs/基础知识.html#一、node-js介绍" class="sidebar-link">一、Node.js介绍</a></li><li class="sidebar-sub-header"><a href="/grbk/NodeJs/基础知识.html#二、node-js安装" class="sidebar-link">二、node.js安装</a></li><li class="sidebar-sub-header"><a href="/grbk/NodeJs/基础知识.html#三、node-js使用" class="sidebar-link">三、node.js使用</a></li><li class="sidebar-sub-header"><a href="/grbk/NodeJs/基础知识.html#四-express" class="sidebar-link">四.Express</a></li><li class="sidebar-sub-header"><a href="/grbk/NodeJs/基础知识.html#五、数据库与身份认证" class="sidebar-link">五、数据库与身份认证</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="nodejs学习"><a href="#nodejs学习" class="header-anchor">#</a> NodeJS学习</h1> <h2 id="一、node-js介绍"><a href="#一、node-js介绍" class="header-anchor">#</a> 一、Node.js介绍</h2> <h3 id="_1-nodejs介绍"><a href="#_1-nodejs介绍" class="header-anchor">#</a> 1.nodejs介绍</h3> <p>​	Node.js是基于Chrome V8 引擎的JavaScript运行环境</p> <p>​	注意：</p> <p>​		a.浏览器时JavaScript的前端运行环境</p> <p>​		b.Node.js是JavaScript的后端运行环境</p> <p>​		c.Node.js中无法调用DOM和BOM等浏览器内置API</p> <h3 id="_2-node-js作用"><a href="#_2-node-js作用" class="header-anchor">#</a> 2.Node.js作用</h3> <p>​	Node.js 作为一个 JavaScript 的运行环境，仅仅提供了基础的功能和 API。然而，基于 Node.js 提供的这些基础功能，很多强大 的工具和框架如雨后春笋，层出不穷，所以学会了 Node.js ，可以让前端程序员胜任更多的工作和岗位！</p> <ul><li>基于 Express/Koa 框架(http://www.expressjs.com.cn/)，可以快速构建 Web 应用</li> <li>基于 Electron 框架(https://electronjs.org/)，可以构建跨平台的桌面应用</li> <li>基于 restify 框架(http://restify.com/)，可以快速构建 API 接口项目</li> <li>读写和操作数据库、创建实用的命令行工具辅助前端开发</li></ul> <h2 id="二、node-js安装"><a href="#二、node-js安装" class="header-anchor">#</a> 二、node.js安装</h2> <h3 id="_1-下载地址-官网"><a href="#_1-下载地址-官网" class="header-anchor">#</a> 1.下载地址：<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener noreferrer">官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h3> <h3 id="_2-版本区别"><a href="#_2-版本区别" class="header-anchor">#</a> 2.版本区别</h3> <div class="language- extra-class"><pre class="language-text"><code>1.LTS 为长期稳定版，对于追求稳定性的企业级项目来说，推荐安装 LTS 版本。
+2.Current 为新特性尝鲜版，对于热衷于尝试新特性的用户来说，推荐安装 Current 版本的 Node.js。但是，Current 版本 中可能存在隐藏的 Bug 或安全性漏洞，因此不推荐在企业级项目中使用 Current 版本的 Node.js。
+3.建议使用LTS版本
+</code></pre></div><h3 id="_3-安装完查看版本"><a href="#_3-安装完查看版本" class="header-anchor">#</a> 3.安装完查看版本</h3> <p>​	打开终端（黑窗口，或者蓝窗口），在终端输入命令 <code>node –v</code> 后，按下回车键，即可查看已安装的 Node.js 的版本号。</p> <h2 id="三、node-js使用"><a href="#三、node-js使用" class="header-anchor">#</a> 三、node.js使用</h2> <h3 id="_1-在node-js环境执行javascript代码"><a href="#_1-在node-js环境执行javascript代码" class="header-anchor">#</a> 1.在node.js环境执行JavaScript代码</h3> <div class="language- extra-class"><pre class="language-text"><code>定义
+	在终端输入 node + 要执行的文件路径
+使用
+	node 1.js
+</code></pre></div><h3 id="_2-fs文件系统模块"><a href="#_2-fs文件系统模块" class="header-anchor">#</a> 2.fs文件系统模块</h3> <h5 id="_2-1介绍-http-nodejs-cn-api-fs-html"><a href="#_2-1介绍-http-nodejs-cn-api-fs-html" class="header-anchor">#</a> 2.1介绍(http://nodejs.cn/api/fs.html)</h5> <div class="language- extra-class"><pre class="language-text"><code>fs 模块式Node.js官方提供的用来操作文件的模块，它提供了一系列的方法和属性，用来满足用户对文件的操作需要
+</code></pre></div><h5 id="_2-2使用"><a href="#_2-2使用" class="header-anchor">#</a> 2.2使用</h5> <div class="language- extra-class"><pre class="language-text"><code>const fs = require('fs')  //导入fs模块
+</code></pre></div><h5 id="_2-3属性及方法"><a href="#_2-3属性及方法" class="header-anchor">#</a> 2.3属性及方法</h5> <p>​		2.3.1 读取指定文件中的内容</p> <div class="language- extra-class"><pre class="language-text"><code>定义
+fs.readFile()
+参数1:文件路径(必填)
+参数2:指定编码格式(可选)
+参数3：文件读取后的回调方法(必填)
+
+使用
+const fs = require('fs')  //导入fs模块
+fs.readFile('./files/11.txt', 'utf-8', (err, data) =&gt; {
+  // 如果读取成功，则err的值为null，data为读取到的数据
+  // 如果读取失败，则err的值为错误的对象，data的值为undefined
+  if (err) {
+    return console.log('文件读取失败：' + err.message)
+  }
+  console.log('文件读取成功，内容是:' + data)
+})
+</code></pre></div><p>​		2.3.1向指定的文件中写入内容</p> <div class="language- extra-class"><pre class="language-text"><code>定义
+fs.writeFile()
+参数1:文件路径(必填),当路径下不存在文件会创建一个文件
+参数2:写入的文件内容(必须)
+参数3:文件的格式默认utf8(可选)
+
+使用
+fs.writeFile('./files/11.txt', '文件读取成功', (err) =&gt; {
+  // 如果文件写入成功，则err的值为null否则err等于错误对象
+   if (err) {
+        console.log('写入文件失败' + err.message);
+    } else {
+        console.log('文件写入成功');
+})
+</code></pre></div><p>​		2.3.2 __dirname</p> <div class="language- extra-class"><pre class="language-text"><code>定义
+	__dirname表示当前文件所在的目录
+使用
+	__dirname + '/files/11.txt'
+使用原因
+	出现路径拼接错误的问题是因为提供了./或../开头的相对路径解决这个问题可以直接提供一个完整的文件存放路径
+
+
+</code></pre></div><h3 id="_3-path路径模块"><a href="#_3-path路径模块" class="header-anchor">#</a> 3.path路径模块</h3> <h5 id="_3-1-介绍"><a href="#_3-1-介绍" class="header-anchor">#</a> 3.1 介绍</h5> <div class="language- extra-class"><pre class="language-text"><code>path模块是Node.js用来处理路径的模块
+</code></pre></div><h5 id="_3-2引入"><a href="#_3-2引入" class="header-anchor">#</a> 3.2引入</h5> <div class="language- extra-class"><pre class="language-text"><code>const path = require('path')  //导入fs模块
+</code></pre></div><h5 id="_3-2路径拼接"><a href="#_3-2路径拼接" class="header-anchor">#</a> 3.2路径拼接</h5> <div class="language- extra-class"><pre class="language-text"><code>定义
+path.join()
+
+使用
+const pathstr = path.join('/a', '/b/c', '../d', './e', 'f')
+console.log(pathstr)  //输出\a\b\d\e\e
+
+const pathstr1 = path.join('/a', '/b/c', '../../d', './e', 'f')
+console.log(pathstr1)  //输出\a\d\e\f
+
+注意: ../会地下前边的路径   ../../ 会抵消前边的两层
+path.join(__dirname,'/files/11.txt')
+注意:凡是涉及到路径拼接的操作,都要使用path.join()方法来实现
+</code></pre></div><h5 id="_3-3获取路径中文件名"><a href="#_3-3获取路径中文件名" class="header-anchor">#</a> 3.3获取路径中文件名</h5> <div class="language- extra-class"><pre class="language-text"><code>定义
+path.basename()
+参数1:路径(必需)
+参数2:文件扩展名(可选)
+返回值:路径中的最后一部分
+
+使用
+const file1 = '/a/b/c/index.html'
+const fullName = path.basename(file1)
+console.log(fullName)  //输出 index.html
+const fullName1 = path.basename(file1, '.html')
+console.log(fullName1) //输出 index
+</code></pre></div><h5 id="_3-4获取路径中的扩展名"><a href="#_3-4获取路径中的扩展名" class="header-anchor">#</a> 3.4获取路径中的扩展名</h5> <div class="language- extra-class"><pre class="language-text"><code>定义
+path.extname()
+参数1:路径(必填)
+返回值:扩展名字符串
+
+使用
+const file2 = '/a/b/c/index.html'
+const extName = path.extname(file2)
+console.log(extName) //输出 .html
+</code></pre></div><h3 id="_4-http模块"><a href="#_4-http模块" class="header-anchor">#</a> 4.http模块</h3> <h5 id="_4-1介绍"><a href="#_4-1介绍" class="header-anchor">#</a> 4.1介绍</h5> <div class="language- extra-class"><pre class="language-text"><code>http是一个系统模块，让我们能够通过简单的流程创建一个Web服务器的模块
+</code></pre></div><h5 id="_4-2ip地址介绍"><a href="#_4-2ip地址介绍" class="header-anchor">#</a> 4.2IP地址介绍</h5> <div class="language- extra-class"><pre class="language-text"><code>IP地址是互联网上每台计算机的唯一地址
+IP地址格式通常用&quot;点分十进制&quot;表示成(a.b.c.d)的形式,其中a、b、c、d都是0~255之间的十进制整数。
+注意：互联网中每台web服务器，都有自己的IP地址
+</code></pre></div><h5 id="_4-3使用http创建服务器"><a href="#_4-3使用http创建服务器" class="header-anchor">#</a> 4.3使用http创建服务器</h5> <div class="language- extra-class"><pre class="language-text"><code>// 导入http模块
+const http = require('http')
+
+// 创建web服务器实例
+const server = http.createServer()
+
+// 为服务器实例绑定request 事件,监听客户端的请求
+server.on('request', (req, res) =&gt; {
+   //req中存着访问与客户端相关的数据或属性
+  console.log(req.url) //客户端请求的地址
+  console.log(req.method) //客户端请求的类型
+  
+  // 设置请求头,防止中文出现乱码
+  res.setHeader('Content-Type', 'text/plain; charset=utf-8')
+  
+  // 调用res.end()方法,向客户端响应一些数据
+  res.end(req.url + req.method)
+})
+
+// 启动服务器
+server.listen(8080, () =&gt; {
+  //其中端口号为80可以省略
+  console.log('server runing at http:127.0.0.1:8080')
+})
+</code></pre></div><h3 id="_5-模块化"><a href="#_5-模块化" class="header-anchor">#</a> 5.模块化</h3> <h5 id="_5-1介绍"><a href="#_5-1介绍" class="header-anchor">#</a> 5.1介绍</h5> <div class="language- extra-class"><pre class="language-text"><code>模块化是指解决一个复杂问题时,自顶向下逐层把系统划分成若干模块的过程。对于整个系统来说，模块是可组合、分解和更换的单元。
+编程中是将一个大文件拆分成独立并互相依赖的多个小模块
+</code></pre></div><h5 id="_5-2好处"><a href="#_5-2好处" class="header-anchor">#</a> 5.2好处</h5> <div class="language- extra-class"><pre class="language-text"><code>提高代码的复用性
+提高代码的可维护性
+可以实现按需加载
+</code></pre></div><h5 id="_5-3node-js的模块分类"><a href="#_5-3node-js的模块分类" class="header-anchor">#</a> 5.3node.js的模块分类</h5> <div class="language- extra-class"><pre class="language-text"><code>内置模块(官方提供的模块:fs、path、http等)
+自定义模块(自己创建的.js文件，都是自定义模块)
+第三方模块(由第三方开发出来的模块，使用前需要先下载)
+</code></pre></div><h5 id="_5-4加载模块"><a href="#_5-4加载模块" class="header-anchor">#</a> 5.4加载模块</h5> <div class="language- extra-class"><pre class="language-text"><code>可以使用require()方法引入
+</code></pre></div><h3 id="_6-模块作用"><a href="#_6-模块作用" class="header-anchor">#</a> 6.模块作用</h3> <h5 id="_6-1介绍"><a href="#_6-1介绍" class="header-anchor">#</a> 6.1介绍</h5> <div class="language- extra-class"><pre class="language-text"><code>在自定义模块中定义的变量、方法等，只能在当前模块内被访问,这种模块级别的访问限制,叫做模块作用域
+</code></pre></div><h5 id="_6-2好处"><a href="#_6-2好处" class="header-anchor">#</a> 6.2好处</h5> <div class="language- extra-class"><pre class="language-text"><code>防止全局变量污染
+</code></pre></div><h5 id="_6-3-向外共享模块作用域"><a href="#_6-3-向外共享模块作用域" class="header-anchor">#</a> 6.3 向外共享模块作用域</h5> <p>​		6.3.1 module 对象</p> <div class="language- extra-class"><pre class="language-text"><code>介绍
+	存放模块中相关信息
+	
+使用
+	在1.js中
+		const aa = '234'
+		module.exports = {
+		  c1: '123',
+		  aa: aa,
+ 		  name: () =&gt; {
+ 		    console.log(123)
+		  }
+		}	
+
+	在2.js中
+		const aa = require('./1.js')
+		console.log(aa)
+	
+</code></pre></div><p>​		6.3.2 exports 对象</p> <div class="language- extra-class"><pre class="language-text"><code>介绍
+	exports和module.exports指向的同一个对象
+	
+使用
+	在1.js中
+		const aa = '234'
+		exports = {
+		  c1: '123',
+		  aa: aa,
+ 		  name: () =&gt; {
+ 		    console.log(123)
+		  }
+		}	
+
+	在2.js中
+		const aa = require('./1.js')
+		console.log(aa)
+</code></pre></div><h3 id="_7-模块化规范"><a href="#_7-模块化规范" class="header-anchor">#</a> 7.模块化规范</h3> <h5 id="_7-1介绍"><a href="#_7-1介绍" class="header-anchor">#</a> 7.1介绍</h5> <div class="language- extra-class"><pre class="language-text"><code>Node.js遵循了CommonJS模块化规范，CommonJS规定了模块的特性和各模块之间如何相互依赖。
+
+CommonJS规定:
+	a.每个模块内部，module变量代表当前模块
+	b.module变量是一个对象，它的exports属性是对外的接口
+	c.加载某个模块，其实是加载模块的module.exports属性，require()方法用于加载模块
+</code></pre></div><h3 id="_8-npm和包"><a href="#_8-npm和包" class="header-anchor">#</a> 8.npm和包</h3> <h5 id="_8-1包的介绍"><a href="#_8-1包的介绍" class="header-anchor">#</a> 8.1包的介绍</h5> <div class="language- extra-class"><pre class="language-text"><code>Node.js中的第三方模块又叫做包
+</code></pre></div><h5 id="_8-2包的来源"><a href="#_8-2包的来源" class="header-anchor">#</a> 8.2包的来源</h5> <div class="language- extra-class"><pre class="language-text"><code>是由第三方个人或团队开发出来的,免费供所有人使用的
+</code></pre></div><h5 id="_8-3包的作用"><a href="#_8-3包的作用" class="header-anchor">#</a> 8.3包的作用</h5> <div class="language- extra-class"><pre class="language-text"><code>包是基于内置模块封装出来的，提供了更高级、更方便的API，极大地提高了开发效率
+</code></pre></div><p>​	8.4包下载位置</p> <div class="language- extra-class"><pre class="language-text"><code>https://www.npmjs.com/   查询包
+https://registry.npmjs.org/  下载包
+</code></pre></div><p>​	8.5下载包</p> <div class="language- extra-class"><pre class="language-text"><code>1.在终端查看是否存在npm，方法 npm -v
+2.下载包  npm i 包名
+3.查看使用方法
+	在https://www.npmjs.com/中找到对应包
+	在包中Documentation文档进行查看
+</code></pre></div><p>​	8.6解决下载包慢点速度问题</p> <div class="language- extra-class"><pre class="language-text"><code>使用淘宝npm镜像服务器
+
+方法
+// 查看当前的下包镜像源
+npm config get registry   
+//将下包的镜像源切换为淘宝镜像源
+npm config set registry=https://registry.npm.taobao.org/ 
+//检查镜像源是否下载成功
+npm config get registry
+</code></pre></div><p>​	8.7nrm</p> <div class="language- extra-class"><pre class="language-text"><code>介绍
+为了更加方便切换下包的镜像源，可以安装nrm这个小工具，利用nrm提供的终端命令，可以更快查看和切换下包的镜像源
+
+使用
+//安装nrm 包管理器
+npm i nrm -g
+
+//查看所有可以的镜像源
+nrm ls
+
+//切换镜像源为taobao镜像
+nrm use taobao
+</code></pre></div><p>​	8.8 包的分类</p> <div class="language- extra-class"><pre class="language-text"><code>1.项目包(安装到项目的node_modules目录中的包)
+	a.开发依赖包(被记录在devDependencies节点的包，只在开发期间使用)
+	b.核心依赖包(被记录在dependencies节点的包，在开放期间和项目上线之后都会使用)
+2.全局包(在执行安装命令时，如果提供了-g参数的)
+</code></pre></div><p>​	8.9开发自己的包</p> <div class="language- extra-class"><pre class="language-text"><code>1.实现功能
+2.初始化包的基本结构
+	a.新建文件夹，作为包的目录文件
+	b.在文件夹中新建三个文件
+		package.json(包管理配置文件)
+		index.js(包的入口文件)
+		README.md(包的说明文档)
+3.初始化package.json
+{
+  &quot;name&quot;: &quot;xxx&quot;,                 //包的名称
+  &quot;version&quot;: &quot;1.0.0&quot;,			 //包的版本	
+  &quot;main&quot;: &quot;index.js&quot;,			 //入口文件
+  &quot;description&quot;: &quot;&quot;,			 //包的描述
+  &quot;keywords&quot;: ['',&quot;&quot;],			 //关键字搜索
+  &quot;license&quot;:&quot;ISC&quot;				 //开源许可协议
+}
+4.开发功能
+5.编辑说明文档
+	安装方式、导入方式、开发的功能介绍、开源协议
+	
+6.注册npm账号
+	a.访问https://www.npmjs.com/网站，点击sign up按钮，进入注册用户页面
+	b.填写账户相关信息
+	c.点击Create an Account按钮，注册账号
+7.将包的服务器地址改成npm官方地址
+8.在终端中执行npm login命令，依次输入用户名、密码、邮箱，即可登录
+9.把包发布到npm上
+	将终端切换到包的根目录之后，运行npm publish命令，即可将包发布到npm上(包不能重名)
+10.删除已发布的包
+	npm unpubilish 包名 --force
+注意：
+	a.只能删除72小时以内发布的包
+	b.删除的包24小时内不允许重复发布
+	c.发布包的时候要谨慎，尽量不要发布没有意义的包
+</code></pre></div><h3 id="_9-模块的加载机制"><a href="#_9-模块的加载机制" class="header-anchor">#</a> 9.模块的加载机制</h3> <h5 id="_9-1优先从缓存中加载"><a href="#_9-1优先从缓存中加载" class="header-anchor">#</a> 9.1优先从缓存中加载</h5> <div class="language- extra-class"><pre class="language-text"><code>模块在第一次加载后会被缓存,这个意味着多次调用require()不会导致模块的代码被执行多次，从而提高模块的加载效率
+</code></pre></div><h5 id="_9-2内置模块的加载机制"><a href="#_9-2内置模块的加载机制" class="header-anchor">#</a> 9.2内置模块的加载机制</h5> <div class="language- extra-class"><pre class="language-text"><code>内置模块是由Node.js官方提供的模块，内置模块的加载优先级最高
+</code></pre></div><h5 id="_9-3自定义模块的加载机制"><a href="#_9-3自定义模块的加载机制" class="header-anchor">#</a> 9.3自定义模块的加载机制</h5> <div class="language- extra-class"><pre class="language-text"><code>使用require()加载自定义模块时，必须指定以./或../开头的路径标识符。在加载自定义模块时，如果没有指定标识符，则node就会把它当作内置模块或第三方模块继续加载
+
+在加载时省略文件的扩展名，则Node.js会按顺序分别
+	a.按照确切的文件名进行加载
+	b.补全.js扩展名进行加载
+	c.补全.json扩展名进行加载
+	d.补全.node扩展名进行加载
+	e.加载失败,终端报错
+</code></pre></div><h5 id="_9-4第三方模块的加载机制"><a href="#_9-4第三方模块的加载机制" class="header-anchor">#</a> 9.4第三方模块的加载机制</h5> <div class="language- extra-class"><pre class="language-text"><code>从当前模块的父目录开始，尝试从、node_modules文件中加载第三方模块，如果没有找到对应的第三方模块，则移动到再上一层的父目录中，进行加载，直到文件系统的根目录
+</code></pre></div><h5 id="_9-5目录作为模块"><a href="#_9-5目录作为模块" class="header-anchor">#</a> 9.5目录作为模块</h5> <div class="language- extra-class"><pre class="language-text"><code>当把目录作为模块标识符，进行加载时的方式
+ a.在被加载的目录下查找一个叫做package.json的文件,并寻找main属性，作为加载的入口
+ b.如果目录中没有package.json文件，或者main入口不存在或者无法解析，则Node.js将会试图加载目录下的index.js文件
+ c.如果以上两个都失败，则Node.js会打印错误信息：Error:Cannot find module 'xxx'
+</code></pre></div><h2 id="四-express"><a href="#四-express" class="header-anchor">#</a> 四.Express</h2> <h3 id="_1-介绍"><a href="#_1-介绍" class="header-anchor">#</a> 1.介绍</h3> <div class="language- extra-class"><pre class="language-text"><code>Express是基于Node.js平台，快速、开发、极简的web开发框架
+Express可以开发
+	Web网站服务器(专门对外提供Web网页资源的服务器)
+	API接口服务器(专门对外提供API接口的服务器)
+使用Express能更方便开发服务器
+</code></pre></div><h3 id="_2-本质"><a href="#_2-本质" class="header-anchor">#</a> 2.本质</h3> <div class="language- extra-class"><pre class="language-text"><code>本质上就是npm上的第三方包,提供了快速创建文本服务器的便捷方式
+</code></pre></div><h3 id="_3-地址-http-www-expressjs-com-cn"><a href="#_3-地址-http-www-expressjs-com-cn" class="header-anchor">#</a> 3.地址(http://www.expressjs.com.cn/)</h3> <h3 id="_4安装"><a href="#_4安装" class="header-anchor">#</a> 4安装</h3> <div class="language- extra-class"><pre class="language-text"><code>npm i express@4.17.1
+</code></pre></div><h3 id="_5创建基本的web服务器"><a href="#_5创建基本的web服务器" class="header-anchor">#</a> 5创建基本的Web服务器</h3> <div class="language- extra-class"><pre class="language-text"><code>// 导入express
+const express = require('express')
+// 创建web服务器
+const app = express()
+// 启动web服务器
+app.listen(8080, () =&gt; {
+  console.log('服务器启动')
+})
+// get Post
+// 参数1:客户端请求的URL地址
+// 参数2：请求对应的处理函数
+// req:请求对象(包含了请求相关的属性和方法)
+// res:响应对象(包含了响应相关的属性和方法)
+app.get('请求URL', (req, res) =&gt; {
+  //req.query 默认是一个空对象
+  //客户端使用?name=zz&amp;age=2 这种查询字符串形式，发送到服务器的参数
+  //req.query.name   req.query.age 获取数据
+  console.log(req.query) 
+  //获取客户端动态参数'地址/:id'
+  console.log(req.params)
+  // 获取客户端发送过来的请求体数据
+  console.log(req.body)
+  //对客户端响应数据
+   res.send({ name: '123', age: '2' })
+})
+
+
+例子
+const express = require('express')
+const app = express()
+app.get('/user', (req, res) =&gt; {
+  console.log(req.query)
+  res.send({ name: '123', age: 2 })
+})
+app.get('/user/:id', (req, res) =&gt; {
+  console.log(req.params)
+  console.log(req.query)
+  res.send({ name: '123', age: 2 })
+})
+app.listen(8080, () =&gt; {
+  console.log('服务器启动')
+})
+</code></pre></div><h3 id="_6托管静态资源"><a href="#_6托管静态资源" class="header-anchor">#</a> 6托管静态资源</h3> <h5 id="_6-1-express-static"><a href="#_6-1-express-static" class="header-anchor">#</a> 6.1 express.static()</h5> <div class="language- extra-class"><pre class="language-text"><code>介绍
+express.static可以方便的创建一个静态资源服务器，将public目录下的图片、css文件、JavaScript文件对外访问
+
+注意
+a.Express在指定的静态目录中查询文件，并对外提供资源访问路径。存放资源文件的目录名不会出现在URL中
+b.托管多个静态资源目录，可以多次调用express.static()函数，访问时就会根据目录添加的顺序进行查找说需文件,找到就不会继续往下找了
+
+使用
+const express = require('express')
+
+const app = express()
+// 创建对外提供的静态资源
+//clock是文件夹位置
+app.use(express.static('./clock'))
+app.listen(8080, () =&gt; {
+  console.log('连接成功')
+})
+
+2.挂载路径前缀
+如果希望在托管的静态资源访问路径之前，挂载路径前缀
+app.use('clock',press.static('./clock'))
+//访问效果 http://localhost:8080/clock/index.html
+</code></pre></div><h3 id="_7-express路由"><a href="#_7-express路由" class="header-anchor">#</a> 7.Express路由</h3> <h5 id="_7-1-介绍"><a href="#_7-1-介绍" class="header-anchor">#</a> 7.1.介绍</h5> <div class="language- extra-class"><pre class="language-text"><code>介绍
+a、路由指的是客户端的请求与服务器处理函数之间的映射关系
+b、express中路由分为请求的类型、请求的URL地址、处理函数
+
+例子使用
+app.get('/user', (req, res) =&gt; {})
+</code></pre></div><p>​	7.2模块化路由</p> <div class="language- extra-class"><pre class="language-text"><code>介绍
+为了方便对路由进行模块化的管理,express不建议将路由直接挂载到app上,推荐将路由抽离为单独的模块
+
+使用
+
+模块化路由.js文件内容
+
+// 导入express
+const express = require('express')
+// 创建路由对象
+const router = express.Router()
+// 挂载请求到路由上
+router.get('/user', (req, res) =&gt; {
+  res.send('123')
+})
+router.post('/user', (req, res) =&gt; {
+  res.send('123')
+})
+//导出路由对象
+module.exports = router
+
+使用模块化路由.js文件内容
+const express = require('express')
+const app = express()
+// 导入路由模块
+const router = require('./02路由模块化')
+// 注册路由模块
+app.use(router)   
+app.use('/api',router) // 添加前缀 
+app.listen(8080, () =&gt; {
+  console.log('连接成功')
+})
+
+
+
+</code></pre></div><h3 id="_8-express中间件"><a href="#_8-express中间件" class="header-anchor">#</a> 8.Express中间件</h3> <h5 id="_8-1介绍"><a href="#_8-1介绍" class="header-anchor">#</a> 8.1介绍</h5> <div class="language- extra-class"><pre class="language-text"><code>介绍
+中间件事业务流程中的中间处理环节
+
+作用
+多个中间件之间，共享同一份req和res，基于这个的特性，我们可以在上游的中间件中，统一为req和res对象中添加自定义的属性和方法，供下游的中间件或路由进行使用
+
+调用流程
+当一个请求到达express的服务器之后，可以连续调用多个中间件，从而对这次请求进行预处理
+
+定义
+const mw = function (req, res, next) {
+  next() //存在这个参数就是中间件 
+}
+
+next作用是实现多个中间件连续调用的关键，它表示把流转关系转交给下一个中间件或路由
+
+
+</code></pre></div><h5 id="_8-2全局的中间件"><a href="#_8-2全局的中间件" class="header-anchor">#</a> 8.2全局的中间件</h5> <div class="language- extra-class"><pre class="language-text"><code>const express = require('express')
+
+const app = express()
+
+// 定义中间件
+app.use(function (req, res, next) {
+  console.log('中间件')
+  req.cs = '123' 
+  next()
+})
+
+app.get('/', (req, res) =&gt; {
+  res.send('1' +  req.cs )
+})
+app.get('/user', (req, res) =&gt; {
+  res.send('2' +  req.cs)
+})
+app.listen(8080, () =&gt; {
+  console.log('连接成功')
+})
+</code></pre></div><h5 id="_8-3定义多个全局中间件"><a href="#_8-3定义多个全局中间件" class="header-anchor">#</a> 8.3定义多个全局中间件</h5> <div class="language- extra-class"><pre class="language-text"><code>说明
+	使用app.use()连续定义多个全局中间件，会按照中间件定义的先后顺序依次进行调用
+
+使用
+const express = require('express')
+
+const app = express()
+
+// 定义中间件
+app.use(function (req, res, next) {
+  console.log('中间件')
+  req.cs = '123'
+  next()
+})
+app.get('/', (req, res) =&gt; {
+  res.send('1' + req.cs)   //输出 1123
+})
+app.use(function (req, res, next) {
+  console.log('中间件')
+  req.cs += '123'
+  next()
+})
+
+app.get('/user', (req, res) =&gt; {
+  res.send('2' + req.cs)  //输出2123123
+})
+app.listen(8080, () =&gt; {
+  console.log('连接成功')
+})	
+</code></pre></div><h5 id="_8-4定义局部生效的中间件"><a href="#_8-4定义局部生效的中间件" class="header-anchor">#</a> 8.4定义局部生效的中间件</h5> <div class="language- extra-class"><pre class="language-text"><code>介绍
+不使用app.use()定义的中间件，就叫做局部生效的中间件
+
+使用
+const express = require('express')
+const app = express()
+
+const mw = (req, res, next) =&gt; {
+  req.cs = 'ccc'
+  next()
+}
+
+app.get('/', mw, (req, res) =&gt; {
+  res.send('123' + req.cs)  //输出 123ccc
+})
+app.get('/user', (req, res) =&gt; {
+  res.send('123' + req.cs) //输出 123undefined 
+})
+
+app.listen(8080, () =&gt; {
+  console.log('连接成功')
+})
+</code></pre></div><h5 id="_8-5定义多个局部生效的中间件"><a href="#_8-5定义多个局部生效的中间件" class="header-anchor">#</a> 8.5定义多个局部生效的中间件</h5> <div class="language- extra-class"><pre class="language-text"><code>const express = require('express')
+const app = express()
+
+const mw = (req, res, next) =&gt; {
+  req.cs = 'ccc'
+  next()
+}
+const mw1 = (req, res, next) =&gt; {
+  req.cs += 'ddd'
+  next()
+}
+// 方法1
+app.get('/', mw, mw1, (req, res) =&gt; {
+  res.send('123' + req.cs) //输出 123cccddd
+})
+
+// 方法2
+app.get('/user', [mw, mw1], (req, res) =&gt; {
+  res.send('123' + req.cs) //输出 123cccddd
+})
+
+app.listen(8080, () =&gt; {
+  console.log('连接成功')
+})
+
+</code></pre></div><h5 id="_8-6中间件注意事项"><a href="#_8-6中间件注意事项" class="header-anchor">#</a> 8.6中间件注意事项</h5> <div class="language- extra-class"><pre class="language-text"><code>a.一定要在路由之前注册中间件
+b.客户端发送过来的请求，可以连续调用多个中间件进行激活
+c.执行完中间件的业务代码之后，不要忘记调用next()函数
+d.为了防止代码逻辑混乱，调用next()函数后不要写额外的代码
+e.连续调用多个中间件时,多个中间件之间共享req和res对象
+f.错误级别的中间件必须注册在所有路由之后
+</code></pre></div><h5 id="_8-7中间件的分类"><a href="#_8-7中间件的分类" class="header-anchor">#</a> 8.7中间件的分类</h5> <div class="language- extra-class"><pre class="language-text"><code>1.应用级别的中间件(通过app.use()、app.get()、app.post()，绑定到app实例上的中间件)
+2.路由级别的中间件(绑定到express.Router()实例上的中间件)
+3.错误级别的中间件(专门用来捕获整个项目中发生的异常错误，从而防止项目异常崩溃问题)
+4.Express内置的中间件
+5.第三方的中间件(非Express官方内置的，是由第三方开发出来的中间件)
+</code></pre></div><h5 id="_8-8错误中间件"><a href="#_8-8错误中间件" class="header-anchor">#</a> 8.8错误中间件</h5> <div class="language- extra-class"><pre class="language-text"><code>使用
+const express = require('express')
+const app = express()
+
+app.get('/', (req, res) =&gt; {
+  throw new Error('错误！123')
+  res.send('123') //输出 123cccddd
+})
+//
+app.use((err, req, res, next) =&gt; {
+  console.log(err)
+  res.send(err.message) //输出 123cccddd
+})
+
+app.listen(8080, () =&gt; {
+  console.log('连接成功')
+})
+</code></pre></div><h5 id="_8-9express内置中间件"><a href="#_8-9express内置中间件" class="header-anchor">#</a> 8.9Express内置中间件</h5> <div class="language- extra-class"><pre class="language-text"><code>1.express.static快速托管静态资源的内置中间件(无兼容性)
+2.express.json解析JSON格式的请求体数据(有兼容性：仅在4.16.0+版本中可用)
+3.express.urlencoded解析URL-encoded格式的请求体数据(有兼容性：仅在4.16.0+版本中可用)
+</code></pre></div><p>​	8.9.1使用express.json()</p> <div class="language- extra-class"><pre class="language-text"><code>const express = require('express')
+const app = express()
+
+// 配置解析 application/json 格式数据的内置中间件,解析JSON格式的数据
+app.use(express.json())
+app.post('/user', (req, res) =&gt; {
+  // 在服务器，可以使用req.body这个属性来接收客户端发送过来的请求体数据
+  // 默认情况下，如果不配置解析表单数据的中间件,则req.body默认等于 underfined
+  console.log(req.body)
+  res.send('123')
+})
+
+
+app.listen(8080, () =&gt; {
+  console.log('连接成功')
+})
+</code></pre></div><p>​	Postman中配置JSON数据类型的参数</p> <p><img src="D:%5C%E5%89%8D%E7%AB%AF%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5C%E5%9B%BE%E7%89%87%5Cnodejs%5CJSON%E6%95%B0%E6%8D%AE.jpg" alt="JSON数据">	8.9.2使用express.urlencoded()</p> <div class="language- extra-class"><pre class="language-text"><code>const express = require('express')
+const app = express()
+
+// 配置解析 application/x-www-form-urlencoded 格式数据的内置中间件
+app.use(express.urlencoded({ extended: false }))
+
+app.post('/user', (req, res) =&gt; {
+  // 在服务器，可以使用req.body这个属性来接收客户端发送过来的请求体数据
+  // 默认情况下，如果不配置解析表单数据的中间件,则req.body默认等于 underfined
+  console.log(req.body)
+  res.send('123')
+})
+
+app.listen(8080, () =&gt; {
+  console.log('连接成功')
+})
+</code></pre></div><p>Postman中配置x-www-form-urlencoded 数据类型的参数</p> <p><img src="D:%5C%E5%89%8D%E7%AB%AF%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5C%E5%9B%BE%E7%89%87%5Cnodejs%5C%E9%85%8D%E7%BD%AEx-www-form-urlencoded.jpg" alt="配置x-www-form-urlencoded"></p> <h5 id="_8-10第三方的中间件"><a href="#_8-10第三方的中间件" class="header-anchor">#</a> 8.10第三方的中间件</h5> <p>​	8.10.1body-parser</p> <div class="language- extra-class"><pre class="language-text"><code>安装
+npm i body-parser
+
+使用
+const express = require('express')
+const app = express()
+
+// 导入解析数据的中间件 body-parser
+const parser = require('body-parser')
+// 注册
+app.use(parser.urlencoded({ extended: false }))
+
+app.post('/user', (req, res) =&gt; {
+  // 默认情况下，如果不配置解析表单数据的中间件,则req.body默认等于 underfined
+  console.log(req.body)
+  res.send('123')
+})
+
+app.listen(8080, () =&gt; {
+  console.log('连接成功')
+})
+</code></pre></div><p>8.11 自定义中间件</p> <p>​	8.11.1介绍</p> <div class="language- extra-class"><pre class="language-text"><code>自己封装一个类似express.urlencoded这样的中间件，来解析POST提交到服务器的表单数据
+</code></pre></div><p>​	8.11.2使用</p> <div class="language- extra-class"><pre class="language-text"><code>const express = require('express')
+const app = express()
+// 导入内置querystring模块
+const qs = require('querystring')
+// 注册中间件
+app.use((req, res, next) =&gt; {
+  // 1.定义str字符串，用来存储客户端发送过来的请求体数据
+  let str = ''
+  // 监听req中的data数据事件
+  req.on('data', (chuck) =&gt; {
+    str += chuck
+  })
+  // 监听req对象中的end事件
+  req.on('end', () =&gt; {
+    // 在str中存放的是完整的请求体数据
+    const body = qs.parse(str)
+    req.body = body
+    next()
+  })
+})
+
+app.post('/user', (req, res) =&gt; {
+  // 默认情况下，如果不配置解析表单数据的中间件,则req.body默认等于 underfined
+  console.log(req.body)
+  res.send('123')
+})
+
+app.listen(8080, () =&gt; {
+  console.log('连接成功')
+})
+
+</code></pre></div><h3 id="_9-express写接口"><a href="#_9-express写接口" class="header-anchor">#</a> 9.Express写接口</h3> <h5 id="_9-1cors-跨域资源共享"><a href="#_9-1cors-跨域资源共享" class="header-anchor">#</a> 9.1cors 跨域资源共享</h5> <p>​	9.1.1接口解决跨域问题</p> <div class="language- extra-class"><pre class="language-text"><code> 安装
+ npm i cors  
+ 导入
+ const cors = require('cors')
+ 在路由之前调用
+ app.use(cors())
+</code></pre></div><p>​	9.1.2cors响应头</p> <div class="language- extra-class"><pre class="language-text"><code>1.Access-Control-Allow-Orign:&lt;origin&gt; | *
+
+属性
+origin参数值指定了允许访问该资源的外域URl
+* 表示所有
+使用
+res.setHeader('Access-Control-Allow-Orign','*')  //所有外域
+res.setHeader('Access-Control-Allow-Orign','http://idsdsa.cn') //指定某个外域
+
+2.Access-Control-Allow-Headers 
+介绍
+默认情况下:cors仅支持客户端向服务器发送9个请求头:
+Accept、Accept-Language、Content-Language、DPR、Downlink、Save-Data、Viewport-Width、Width、Content-Type(值仅限于 text/plain、multipart/form-data、application/x-www-form-urlencoded 三者之一)
+如果客户端向服务器发送了额外的请求头信息，则需要再服务器端，通过Access-Control-Allow-Headers对额外的请求头进行声明，否则报错
+
+使用
+// 允许客户端额外向服务器发送Content-Type请求头和X-Custom-Header请求头
+// 注意：多个请求头之间使用英文的逗号进行分隔
+res.setHeader('Access-Control-Allow-Headers', 'Content-Type,X-Custom-Header')
+
+3.Access-Control-Allow-Methods
+介绍
+	默认情况下，cors仅支持客户端发起GET、POST、HEAD请求
+	
+使用
+  // 只允许 POST、GET、DELECT、HEAD 请求方式
+  res.setHeader('Access-Control-Allow-Methods', 'POST,GET,DELECT,HEAD')
+  // 允许所有的HTTP请求方法
+  res.setHeader('Access-Control-Allow-Methods','*') 
+</code></pre></div><p>​	9.1.3cors请求分类</p> <div class="language- extra-class"><pre class="language-text"><code>根据请求方式和请求头的不同，可以将cors的请求分为两大类：
+	简单请求
+	 条件(都满足)
+	  a.请求方式：GET、POST、HEAD三者之一
+	  b.HTTP头部信息不超过以下几种字段:无自定义头部字段、Accept、Accept-Language、Content-Language、DPR、Downlink、Save-Data、Viewport-Width、Width、Content-Type(值仅限于 text/plain、multipart/form-data、application/x-www-form-urlencoded 三者之一)
+	预检请求
+	  条件(满足一个)
+	   a.请求方式：GET、POST、HEAD之外的请求Method类型
+	   b.请求头中包含自定义头部字段
+	   c.向服务器发送了application/json格式的数据
+	
+	在浏览器与服务器正式通信之前，浏览器会先发送POTION请求继续预检，以获知服务器是否允许改实际请求，所以这一次的OPTION请求称为&quot;预检请求&quot;。服务器成功响应预检请求后，才会发送真正的请求，并且携带真实数据
+	
+两者区别
+  1.请求次数
+   简单请求:客户端和服务器之间只会请求一次
+   预检请求:客户端和服务器之间会发生两次请求,OPTION预检请求成功之后才会发起真正的请求
+  2.
+</code></pre></div><h5 id="_9-2接口实现"><a href="#_9-2接口实现" class="header-anchor">#</a> 9.2接口实现</h5> <div class="language- extra-class"><pre class="language-text"><code>路由模块配置
+const express = require('express')
+const apiRouter = express.Router()
+
+//挂载路由
+// get 接口
+apiRouter.get('/url', (req, res) =&gt; {
+  // 获取客户端传递的数据
+  console.log(123)
+  const query = req.query
+  // 调用 res.send()方法,把数据响应给客户端
+  res.send({
+    status: 0,
+    msg: 'GET 请求成功！',
+    data: query
+  })
+})
+
+// post 接口
+apiRouter.post('/post', (req, res) =&gt; {
+  // 获取客户端传递的数据
+  const body = req.body
+  // 调用 res.send()方法,把数据响应给客户端
+  res.send({
+    status: 0,
+    msg: 'POST 请求成功！',
+    data: body
+  })
+})
+module.exports = apiRouter
+
+在使用文件
+// 导入 express
+const express = require('express')
+// 导入路由模块
+const router = require('路由模块')
+// 导入cors
+const cors = require('cors')
+// 创建服务器实例
+const app = express()
+// 注册cors中间件
+app.use(cors())
+// 配置解析 application/json 格式数据的内置中间件,解析JSON格式的数据
+app.use(express.json())
+// 配置解析 application/x-www-form-urlencoded 格式数据的内置中间件
+app.use(express.urlencoded({ extended: false }))
+// 注册路由
+app.use('/api', router)
+//启动服务器
+app.listen(8080, () =&gt; {
+  console.log('连接成功')
+})
+
+</code></pre></div><h5 id="_9-3json接口"><a href="#_9-3json接口" class="header-anchor">#</a> 9.3JSON接口</h5> <p>​	9.3.1介绍</p> <div class="language- extra-class"><pre class="language-text"><code>浏览器端通过&lt;script&gt;标签的src属性请求服务器上的数据。同时服务器返回一个函数的调用，这种请求数据的方式叫做JSONP
+</code></pre></div><p>​	9.3.2.特点</p> <div class="language- extra-class"><pre class="language-text"><code>1.JSONP不属于真正的Ajax请求，因为它没有使用XMLHttpRequest这个对象
+2.JSONP仅支持GET请求，不支持POST、PUT、DELETE等请求
+</code></pre></div><p>​	9.3.3创建JSONP接口注意事项</p> <div class="language- extra-class"><pre class="language-text"><code>项目中已经配置了cors跨域资源共享，为了防止冲突，必须在配置CORS中间件之前声明JSONP的接口，否则JSONP接口会被处理成开启了CORS的接口
+</code></pre></div><p>​	9.3.4实现JSONP接口</p> <div class="language- extra-class"><pre class="language-text"><code>// 必须在配置cors中间件之前配置JSONP的接口
+app.json('/api/jsonp', (req, res) =&gt; {
+  // 定义JSONP 接口具体的实现过程
+  // 1.得到函数的名称
+  const funName = req.query.callback
+  // 2.定义要发送到客户端的数据对象
+  const data = { name: 'zz', id: '123' }
+  // 3.拼接出一个函数的调用
+  const srciptStr = `${funName}(${JSON.stringify(data)})`
+  // 4.把拼接的字符串,响应到客户端
+  res.send(srciptStr)
+})
+</code></pre></div><p>​	9.3.5在页面中使用jQuery发送JSONP请求</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;script src=&quot;https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;button id=&quot;btnJSONP&quot;&gt;JSONP&lt;/button&gt;
+  &lt;script&gt;
+    $(function () {
+      $('#btnJSONP').on('click', function () {
+        $.ajax({
+          type: 'GET',
+          url: 'http://127.0.0.1:8080/api/jsonp',
+          dataType: 'jsonp',
+          success: function (res) {
+            console.log(res);
+          }
+        })
+      })
+    })
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre></div><h2 id="五、数据库与身份认证"><a href="#五、数据库与身份认证" class="header-anchor">#</a> 五、数据库与身份认证</h2> <h3 id="_1-数据库"><a href="#_1-数据库" class="header-anchor">#</a> 1.数据库</h3> <h5 id="_1-1介绍"><a href="#_1-1介绍" class="header-anchor">#</a> 1.1介绍</h5> <div class="language- extra-class"><pre class="language-text"><code>数据库是用来组织、储存和管理数据的仓库
+</code></pre></div><h5 id="_1-2常见的数据的分类"><a href="#_1-2常见的数据的分类" class="header-anchor">#</a> 1.2常见的数据的分类</h5> <div class="language- extra-class"><pre class="language-text"><code>MySQL(是目前使用最广泛、流行度最高的开源免费的数据库)
+Oracle(收费)
+SQL Service(收费)
+Mongodb
+
+其中，MySQL、Oracle、SQL Service属于传统型的数据库(又叫做:关系型数据库或SQL数据库)，这三者的设计理念相同，用法比较类型
+Mongodb属于新型数据库(又叫做:非关系型数据库或NoSQL数据库)，它在一定程度上弥补了传统型数据库的缺陷
+</code></pre></div><h5 id="_1-3传统数据库的数据组织结构"><a href="#_1-3传统数据库的数据组织结构" class="header-anchor">#</a> 1.3传统数据库的数据组织结构</h5> <div class="language- extra-class"><pre class="language-text"><code>数据组织结构分为数据库、数据表、数据行、字段
+开发中数据结构之间的关系
+	1.每个项目都对象独立的数据库
+	2.不同数据存储到数据库中的不同表中
+	3.每个表存在的信息是由字段来决定的
+	4.表中的行代表每一条具体的数据
+</code></pre></div><h3 id="_2-数据库的安装和配置"><a href="#_2-数据库的安装和配置" class="header-anchor">#</a> 2.数据库的安装和配置</h3> <p>​	2.1介绍安装软件</p> <div class="language- extra-class"><pre class="language-text"><code>MySQL Serve:专门用来提供数据存储和服务的转件
+MySQL Workbeanch:可视化的MySQL管理工具，可以方便的操作存储在MySQL Server中的数据
+</code></pre></div><p>​	2.2 安装</p> <div class="language- extra-class"><pre class="language-text"><code>要运行mysql-installer-community-8.0.19.0.msi安装包,就能安装MySQL Serve和MySQL Workbeanch
+</code></pre></div><h5 id="_2-3使用数据库"><a href="#_2-3使用数据库" class="header-anchor">#</a> 2.3使用数据库</h5> <p>​		2.3.1新建Mysql连接</p> <p>​		2.3.2创建数据库</p> <p>​		2.3.3创建数据表</p> <div class="language- extra-class"><pre class="language-text"><code>DataType数据类型:
+	init    整数
+	varchar 字符串
+	tinyint 布尔型
+	
+字段的特殊标识
+	pk 主键，唯一标识
+	nn 值不能为空
+	uq 值唯一
+	ai 自动增长
+</code></pre></div><p>​	2.3.4使用sql操作表</p> <p>​		2.3.4.1介绍Sql</p> <div class="language- extra-class"><pre class="language-text"><code>SQL是结构化查询语言，专门用来访问和处理数据库的编程语言，以编辑的方式操作数据库里的数据
+</code></pre></div><p>​		2.3.4.2语法</p> <div class="language- extra-class"><pre class="language-text"><code>1.查询
+SELECT * FROM `user` //查询user表中所有列
+SELECT username FROM `user`  //查询user表中列为username数据
+
+注意:
+	1.sql语句不区分大小写
+</code></pre></div><h3 id="path和fs共同使用"><a href="#path和fs共同使用" class="header-anchor">#</a> path和fs共同使用</h3> <div class="language- extra-class"><pre class="language-text"><code>const pathstr2 = path.join(__dirname, './files/11.txt')
+fs.readFile(pathstr2, 'utf-8', (err, data) =&gt; {
+  console.log(err, data)
+})
+</code></pre></div><h3 id="终端命令"><a href="#终端命令" class="header-anchor">#</a> 终端命令</h3> <div class="language- extra-class"><pre class="language-text"><code>使用 ↑ 键，可以快速定位到上一次执行的命令
+使用 tab 键，能够快速补全路径
+使用 esc 键，能够快速清空当前已输入的命令
+输入 cls 命令，可以清空终端
+</code></pre></div><h3 id="其他"><a href="#其他" class="header-anchor">#</a> 其他</h3> <div class="language- extra-class"><pre class="language-text"><code>npm init -y //初始化包管理配置文件
+</code></pre></div><h3 id="包"><a href="#包" class="header-anchor">#</a> 包</h3> <h5 id="_1-moment"><a href="#_1-moment" class="header-anchor">#</a> 1.moment</h5> <div class="language- extra-class"><pre class="language-text"><code>时间格式化
+</code></pre></div><h5 id="_2-i5ting-toc"><a href="#_2-i5ting-toc" class="header-anchor">#</a> 2.i5ting_toc</h5> <div class="language- extra-class"><pre class="language-text"><code>介绍
+i5ting_toc是一个可以把md文档转为html页面的小工具
+
+使用
+//安装
+npm install i5ting_toc -g
+//调用i5ting_toc将md转成html
+i5ting_toc -f 要转换的md文件路径 -o
+</code></pre></div><h5 id="_3-nodemon"><a href="#_3-nodemon" class="header-anchor">#</a> 3.nodemon</h5> <div class="language- extra-class"><pre class="language-text"><code>介绍
+nodemon能够监听项目文件的变化，当代码修改后,nodemon会自动帮我们重启项目，极大方便了开发和调用
+
+安装
+npm i nodemon -g
+
+使用
+nodemon 执行文件路径 
+nodemon 1.js
+</code></pre></div><h3 id="node-js内置模块"><a href="#node-js内置模块" class="header-anchor">#</a> Node.js内置模块</h3> <h5 id="_1-querystring"><a href="#_1-querystring" class="header-anchor">#</a> 1.querystring</h5> <div class="language- extra-class"><pre class="language-text"><code>介绍
+	querystring模块是专门用来处理查询字符串，通过这个模块提供的parse()函数，可以把字符串解析成对象
+ // 导入内置querystring模块
+const qs = require('querystring')   
+//使用
+const str = 'name=cc&amp;id=123&amp;age=%E7%94%B7'
+const body = qs.parse(str)   
+console.log(body) //输出 { name: 'cc', id: '123', age: '男' }
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2024-12-22 22:07:31</span></div></footer> <!----> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/grbk/assets/js/app.81e1f974.js" defer></script><script src="/grbk/assets/js/2.79b14797.js" defer></script><script src="/grbk/assets/js/1.dca57fa9.js" defer></script><script src="/grbk/assets/js/46.9e3764e6.js" defer></script><script src="/grbk/assets/js/31.ae4fcb97.js" defer></script>
+  </body>
+</html>
